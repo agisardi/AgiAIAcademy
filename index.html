@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agi's AI Academy | AI For Life-Long Learners</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Demystifying AI through practice, not theory. Join 300+ students at Agi's AI Academy in Newton, MA — workshops, deep dives, and hands-on courses for lifelong learners.">
+    <meta name="keywords"
+        content="AI courses, artificial intelligence classes, AI for beginners, lifelong learning, AI workshops, Newton MA, AI literacy, hands-on AI training">
+    <meta name="author" content="Agi and Zac Sardi, Harvard Alumni and AI Educators">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.agiaiacademy.com/">
+
+    <!-- Open Graph Tags (Facebook, LinkedIn, iMessage, Slack, Discord) -->
+    <meta property="og:title" content="Agi's AI Academy | AI For Life-Long Learners">
+    <meta property="og:description"
+        content="Demystifying AI through practice, not theory. Workshops, deep dives, and hands-on courses for lifelong learners in Newton, MA.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.agiaiacademy.com/">
+    <meta property="og:image" content="https://www.agiaiacademy.com/AIBackgroundImageGen.jpeg">
+    <meta property="og:site_name" content="Agi's AI Academy">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Agi's AI Academy | AI For Life-Long Learners">
+    <meta name="twitter:description"
+        content="Demystifying AI through practice, not theory. Workshops, deep dives, and hands-on courses for lifelong learners.">
+    <meta name="twitter:image" content="https://www.agiaiacademy.com/AIBackgroundImageGen.jpeg">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Agi's AI Academy",
+        "description": "Demystifying AI through practice, not theory. Hands-on AI courses for lifelong learners.",
+        "url": "https://www.agiaiacademy.com",
+        "email": "info@agiaiacademy.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Newton",
+            "addressRegion": "MA",
+            "addressCountry": "US"
+        },
+        "founder": [
+            { "@type": "Person", "name": "Agi Sardi" },
+            { "@type": "Person", "name": "Zac Sardi" }
+        ],
+        "sameAs": []
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#4f46e5', // Indigo 600
+                        secondary: '#4338ca', // Indigo 700
+                        accent: '#10b981', // Emerald 500
+
+                        // Vibrant Brand Palette
+                        brandOrange: '#ff9914',
+                        brandOrangeDark: '#c26e00',
+                        brandPurple: '#6a70d8',
+                        brandPurpleDark: '#44487b',
+                        brandPink: '#f277ba',
+                        brandPinkDark: '#b83b82',
+                        brandYellow: '#f7ec41',
+                        brandYellowDark: '#d4c60d',
+
+                        slate: {
+                            850: '#1e293b', // Custom dark slate
+                        }
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                        'hero-pattern': "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%234f46e5\" fill-opacity=\"0.05\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')",
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(135deg, #4f46e5, #9333ea);
+        }
+
+        /* Smooth scrolling adjustment for sticky header */
+        html {
+            scroll-padding-top: 80px;
+        }
+
+        /* Carousel Styles */
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            padding: 20px 0;
+            cursor: grab;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+            /* gap is handled by padding on slides now */
+        }
+
+        .carousel-slide {
+            min-width: 50%;
+            display: flex;
+            justify-content: center;
+        }
+
+        @media (min-width: 768px) {
+            .carousel-slide {
+                min-width: 25%;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .carousel-slide {
+                min-width: 18%;
+            }
+        }
+
+        .testimonial-card-inner {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            height: 100%;
+            position: relative;
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonial-card-inner:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brandPurple selection:text-white">
+    <!-- Top Announcement Banner -->
+    <div
+        class="bg-gradient-to-r from-brandOrange to-brandPink text-white px-4 py-3 sm:px-6 lg:px-8 w-full text-center text-sm font-medium shadow-md relative z-[60]">
+        <div class="inline-flex items-center justify-center gap-3 flex-wrap">
+            <img src="images/MetroWestBubble.png"
+                class="h-8 w-8 rounded-full shadow-sm border-2 border-white/50 object-cover" alt="MetroWest Cover">
+            <span>We're on the cover of MetroWest Living!</span>
+            <a href="MetroWestLiving_May2026Website.pdf" target="_blank"
+                class="font-bold underline decoration-white/50 hover:decoration-white transition-colors">
+                Read the Article &rarr;
+            </a>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav
+        class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-slate-200/50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-3 group">
+                    <div
+                        class="w-10 h-10 bg-gradient-to-br from-primary to-brandPurple rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-105 transition-transform duration-300">
+                        A</div>
+                    <span class="font-bold text-2xl tracking-tight text-slate-900 font-display">Agi’s AI Academy</span>
+                </a>
+                <div class="hidden md:flex space-x-8 items-center">
+
+                    <a href="#students"
+                        class="text-slate-600 hover:text-primary font-medium transition hover:-translate-y-0.5 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all hover:after:w-full">For
+                        Students</a>
+                    <a href="#organizations"
+                        class="text-slate-600 hover:text-primary font-medium transition hover:-translate-y-0.5 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all hover:after:w-full">For
+                        Organizations</a>
+                    <a href="#about"
+                        class="text-slate-600 hover:text-primary font-medium transition hover:-translate-y-0.5 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all hover:after:w-full">About
+                        Us</a>
+                    <a href="#testimonials"
+                        class="text-slate-600 hover:text-primary font-medium transition hover:-translate-y-0.5 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all hover:after:w-full">Testimonials</a>
+                    <a href="projects.html"
+                        class="text-slate-600 hover:text-primary font-medium transition hover:-translate-y-0.5 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all hover:after:w-full">The
+                        Innovation Lab</a>
+                    <a href="register.html"
+                        class="text-slate-600 hover:text-primary font-medium transition hover:-translate-y-0.5 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all hover:after:w-full">Register</a>
+                    <a href="mailto:info@agiaiacademy.com"
+                        class="bg-slate-900 hover:bg-primary text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all shadow-md hover:shadow-xl transform hover:-translate-y-0.5">Contact
+                        Us</a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobile-menu-btn"
+                    class="md:hidden p-2 rounded-lg text-slate-600 hover:text-primary hover:bg-slate-100 transition-colors"
+                    aria-label="Open menu" aria-expanded="false">
+                    <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden border-t border-slate-200/50">
+                <div class="py-4 space-y-1">
+                    <a href="#students"
+                        class="mobile-nav-link block px-4 py-3 text-slate-600 hover:text-primary hover:bg-primary/5 rounded-lg font-medium transition-colors">For
+                        Students</a>
+                    <a href="#organizations"
+                        class="mobile-nav-link block px-4 py-3 text-slate-600 hover:text-primary hover:bg-primary/5 rounded-lg font-medium transition-colors">For
+                        Organizations</a>
+                    <a href="#about"
+                        class="mobile-nav-link block px-4 py-3 text-slate-600 hover:text-primary hover:bg-primary/5 rounded-lg font-medium transition-colors">About
+                        Us</a>
+                    <a href="#testimonials"
+                        class="mobile-nav-link block px-4 py-3 text-slate-600 hover:text-primary hover:bg-primary/5 rounded-lg font-medium transition-colors">Testimonials</a>
+                    <a href="projects.html"
+                        class="mobile-nav-link block px-4 py-3 text-slate-600 hover:text-primary hover:bg-primary/5 rounded-lg font-medium transition-colors">The
+                        Innovation Lab</a>
+                    <a href="register.html"
+                        class="mobile-nav-link block px-4 py-3 text-slate-600 hover:text-primary hover:bg-primary/5 rounded-lg font-medium transition-colors">Register</a>
+                    <div class="pt-2 px-4">
+                        <a href="mailto:info@agiaiacademy.com"
+                            class="block w-full text-center bg-slate-900 hover:bg-primary text-white px-6 py-3 rounded-full text-sm font-semibold transition-all shadow-md">Contact
+                            Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative overflow-hidden bg-slate-50">
+        <div class="absolute inset-0 bg-hero-pattern opacity-100"></div>
+        <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
+            <div
+                class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-brandPink to-brandPurple opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]">
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2 space-y-8 relative z-10">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 border border-slate-200 shadow-sm backdrop-blur-sm">
+                        <span class="relative flex h-3 w-3">
+                            <span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brandOrange opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-brandOrange"></span>
+                        </span>
+                        <span class="text-sm font-semibold text-slate-700">Summer 2026 Registration Open</span>
+                    </div>
+
+                    <h1
+                        class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 leading-[1.1] tracking-tight">
+                        AI For <br />
+                        <span class="gradient-text">Life-Long Learners</span>
+                    </h1>
+
+                    <p class="text-xl text-slate-600 leading-relaxed max-w-lg">
+                        Demystifying Artificial Intelligence through practice, not just theory. Join our vibrant
+                        community and unlock the power of AI for your personal growth and creativity.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="register.html"
+                            class="bg-primary text-white px-8 py-4 rounded-xl font-bold hover:bg-secondary transition-all shadow-lg hover:shadow-primary/30 text-center transform hover:-translate-y-1">
+                            Find Your Class
+                        </a>
+                        <a href="#organizations"
+                            class="bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-xl font-bold hover:bg-slate-50 transition-all shadow-sm hover:shadow-md text-center transform hover:-translate-y-1">
+                            For Organizations
+                        </a>
+                    </div>
+
+                    <div class="pt-8 flex items-center gap-4 text-sm text-slate-500 font-medium">
+                        <div class="flex -space-x-2">
+                            <div
+                                class="w-8 h-8 rounded-full bg-brandOrange flex items-center justify-center text-white text-xs border-2 border-white">
+                                JB</div>
+                            <div
+                                class="w-8 h-8 rounded-full bg-brandPurple flex items-center justify-center text-white text-xs border-2 border-white">
+                                AS</div>
+                            <div
+                                class="w-8 h-8 rounded-full bg-brandPink flex items-center justify-center text-white text-xs border-2 border-white">
+                                MK</div>
+                        </div>
+                        <p>Join 300+ students learning AI today</p>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2 relative">
+                    <div
+                        class="absolute -inset-4 bg-gradient-to-r from-brandPurple to-brandPink rounded-[2rem] blur-2xl opacity-40 transform rotate-3">
+                    </div>
+                    <img src="AIBackgroundImageGen.jpeg" alt="Abstract rendering of AI and human connection"
+                        class="relative rounded-[2rem] shadow-2xl z-10 w-full object-cover transform transition hover:scale-[1.01] duration-500 border-4 border-white">
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
+            <div
+                class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-brandYellow to-brandOrange opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]">
+            </div>
+        </div>
+    </header>
+
+    <main class="space-y-32 pb-32">
+
+        <!-- Individual Classes Section -->
+        <section id="students" class="relative py-24 bg-slate-100 overflow-hidden">
+            <!-- Background Elements -->
+            <div class="absolute inset-0 pointer-events-none">
+                <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-brandPurple/10 blur-3xl"></div>
+                <div class="absolute top-1/2 right-0 w-80 h-80 rounded-full bg-brandOrange/10 blur-3xl"></div>
+                <div class="absolute bottom-0 left-1/3 w-64 h-64 rounded-full bg-brandPink/10 blur-3xl"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+
+                    <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mt-3 mb-6">Chart Your Path to AI Mastery
+                    </h2>
+                    <p class="text-xl text-slate-600">
+                        Whether you're a complete beginner or ready to build your own AI applications, we have a path
+                        for
+                        you.
+                    </p>
+                </div>
+
+
+
+                <!-- NEW: Learning Pathways (Curriculum Overview) -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-32">
+                    <!-- 1 Day Pathway -->
+                    <a href="register.html#schedule-1day"
+                        class="group bg-white p-6 rounded-2xl border border-slate-200 hover:border-brandYellow hover:shadow-lg transition-all text-left">
+                        <div
+                            class="w-12 h-12 bg-yellow-50 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <span class="text-2xl">⚡️</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-2">1 Day Workshop</h4>
+                        <p class="text-sm text-slate-500 mb-4">The "Quick Start"</p>
+                        <p class="text-sm text-slate-600">Perfect for getting up to speed instantly without a long
+                            commitment.</p>
+                        <div
+                            class="mt-4 text-brandYellowDark text-xs font-bold uppercase tracking-wide group-hover:underline">
+                            Register &rarr;</div>
+                    </a>
+
+                    <!-- 3 Week Pathway -->
+                    <a href="register.html#schedule-3week"
+                        class="group bg-white p-6 rounded-2xl border border-slate-200 hover:border-brandPurple hover:shadow-lg transition-all text-left">
+                        <div
+                            class="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <span class="text-2xl">🚀</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-2">3 Week Sprint</h4>
+                        <p class="text-sm text-slate-500 mb-4">The "Fast Track"</p>
+                        <p class="text-sm text-slate-600">Designed for busy professionals and learners who need
+                            high-impact skills, fast.</p>
+                        <div
+                            class="mt-4 text-brandPurple text-xs font-bold uppercase tracking-wide group-hover:underline">
+                            Register &rarr;</div>
+                    </a>
+
+                    <!-- 5 Week Pathway -->
+                    <a href="register.html#schedule-5week"
+                        class="group bg-white p-6 rounded-2xl border border-slate-200 hover:border-brandOrange hover:shadow-lg transition-all text-left">
+                        <div
+                            class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <span class="text-2xl">🛠️</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-2">5 Week Deep Dive</h4>
+                        <p class="text-sm text-slate-500 mb-4">The "Toolkit Builder"</p>
+                        <p class="text-sm text-slate-600">A structured journey from theory to mastery with practical
+                            assignments.</p>
+                        <div
+                            class="mt-4 text-brandOrangeDark text-xs font-bold uppercase tracking-wide group-hover:underline">
+                            Register &rarr;</div>
+                    </a>
+
+
+
+                    <!-- 10 Session Pathway -->
+                    <a href="register.html#schedule-10session"
+                        class="group bg-white p-6 rounded-2xl border border-slate-200 hover:border-brandPink hover:shadow-lg transition-all text-left">
+                        <div
+                            class="w-12 h-12 bg-pink-50 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <span class="text-2xl">🧪</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-2">10 Session Labs</h4>
+                        <p class="text-sm text-slate-500 mb-4">The "Community"</p>
+                        <p class="text-sm text-slate-600">No homework. Just live "Show 'n Tell" labs and co-learning.
+                        </p>
+                        <div
+                            class="mt-4 text-brandPinkDark text-xs font-bold uppercase tracking-wide group-hover:underline">
+                            Register &rarr;</div>
+                    </a>
+
+                    <!-- AI Literacy Pathway (Moved to end & Dark Styled) -->
+                    <a href="register.html#schedule-literacy"
+                        class="group bg-slate-900 p-6 rounded-2xl border border-slate-800 hover:border-primary hover:shadow-lg transition-all text-left relative overflow-hidden">
+                        <div
+                            class="absolute top-0 right-0 -mr-8 -mt-8 w-32 h-32 rounded-full bg-primary opacity-10 blur-xl group-hover:opacity-20 transition-opacity">
+                        </div>
+                        <div
+                            class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform backdrop-blur-sm">
+                            <span class="text-2xl">🤖</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white mb-2">AI in Action. Stop Chatting. Start Building.</h4>
+                        <p class="text-sm text-slate-400 mb-4">The "Foundation"</p>
+                        <p class="text-sm text-slate-300">Deepen your expertise with high-level strategies and
+                            real-world implementation.</p>
+                        <div class="mt-4 text-primary text-xs font-bold uppercase tracking-wide group-hover:underline">
+                            Register &rarr;</div>
+                    </a>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="register.html"
+                        class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all transform bg-slate-900 rounded-full hover:bg-primary hover:-translate-y-1 shadow-lg hover:shadow-primary/30">
+                        View Full Class Schedule & Registration
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ORGANIZATIONS SECTION (NEW) -->
+        <section id="organizations" class="py-24 bg-slate-900 text-white relative overflow-hidden">
+            <!-- Background effects -->
+            <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full">
+                <div
+                    class="absolute top-1/4 right-0 w-[500px] h-[500px] bg-brandPurple/30 rounded-full blur-3xl mix-blend-screen animate-pulse">
+                </div>
+                <div
+                    class="absolute bottom-1/4 left-0 w-[500px] h-[500px] bg-brandOrange/20 rounded-full blur-3xl mix-blend-screen">
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="flex flex-col lg:flex-row items-center gap-16">
+                    <div class="lg:w-1/2">
+                        <span
+                            class="inline-block py-1 px-3 rounded bg-brandYellow/10 text-brandYellow text-sm font-bold uppercase tracking-wider mb-6">For
+                            Organizations</span>
+                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+                            Bring the Future to <br />
+                            <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-brandYellow to-brandOrange">Your
+                                Community</span>
+                        </h2>
+                        <p class="text-lg text-slate-300 mb-8 leading-relaxed">
+                            Empower your organization with critical insights and captivating learning experiences. We
+                            deliver tailored, community-oriented AI courses that demystify technology and foster
+                            connection.
+                        </p>
+
+                        <ul class="space-y-4 mb-10">
+                            <li class="flex items-start gap-4">
+                                <div
+                                    class="mt-1 w-6 h-6 rounded-full bg-brandGreen/20 flex items-center justify-center text-brandGreen">
+                                    <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white">Customized Curriculums</h4>
+                                    <p class="text-sm text-slate-400">Content adapted to your members' interests and
+                                        skill levels.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div
+                                    class="mt-1 w-6 h-6 rounded-full bg-brandGreen/20 flex items-center justify-center text-brandGreen">
+                                    <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white">Engaging Workshops</h4>
+                                    <p class="text-sm text-slate-400">Interactive sessions that spark conversation and
+                                        creativity.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div
+                                    class="mt-1 w-6 h-6 rounded-full bg-brandGreen/20 flex items-center justify-center text-brandGreen">
+                                    <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white">Proven Track Record</h4>
+                                    <p class="text-sm text-slate-400">Trusted by OLLIs, libraries, and community
+                                        centers.</p>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <a href="mailto:info@agiaiacademy.com?subject=Organization%20Inquiry"
+                            class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-brandOrange to-brandYellowDark text-slate-900 font-bold rounded-xl hover:shadow-lg hover:shadow-brandOrange/20 transition transform hover:-translate-y-1">
+                            Partner With Us
+                        </a>
+                    </div>
+
+                    <div class="lg:w-1/2 grid grid-cols-2 gap-4">
+                        <div class="space-y-4 mt-8">
+                            <div class="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10">
+                                <div class="text-4xl mb-2">🏛️</div>
+                                <h3 class="font-bold text-white">Community Centers</h3>
+                            </div>
+                            <div class="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10">
+                                <div class="text-4xl mb-2">📚</div>
+                                <h3 class="font-bold text-white">Libraries</h3>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10">
+                                <div class="text-4xl mb-2">🎓</div>
+                                <h3 class="font-bold text-white">Alumni Groups</h3>
+                            </div>
+                            <div class="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10">
+                                <div class="text-4xl mb-2">🤝</div>
+                                <h3 class="font-bold text-white">Non-Profits</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT US SECTION (NEW) -->
+        <section id="about" class="py-24 bg-white relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <!-- Left: Text Content -->
+                    <div>
+                        <span class="text-brandPurple font-bold uppercase tracking-wider text-sm mb-2 block">Who We
+                            Are</span>
+                        <h2 class="text-4xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                            <img src="agiandzac.jpg" alt="Agi and Zac Sardi"
+                                class="h-[2.4em] w-auto rounded-md mix-blend-multiply shadow-sm">
+                            Founders Agi & Zac Sardi
+                        </h2>
+                        <div class="prose prose-lg text-slate-600 space-y-6">
+                            <p class="leading-relaxed">
+                                We are educators and innovators passionate about making artificial intelligence
+                                approachable,
+                                engaging, and useful for everyone. Our program brings together expertise in teaching,
+                                technology, and lifelong learning to create a hands-on path into the world of AI.
+                            </p>
+
+                            <div class="bg-indigo-50/50 p-6 rounded-2xl border border-indigo-100">
+                                <h4 class="text-brandPurple font-bold text-lg mb-2">🎯 Our Mission</h4>
+                                <p class="text-slate-700 text-sm leading-relaxed">
+                                    To demystify AI through practice, not theory. We believe AI should be a tool anyone
+                                    can
+                                    explore, understand, and use — not just computer scientists and engineers.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-4 flex items-center gap-2">
+                                    <span class="text-2xl">🛠️</span> What We Do
+                                </h4>
+                                <ul class="space-y-3 text-sm text-slate-700">
+                                    <li class="flex items-start gap-3">
+                                        <svg class="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span>Understand core AI concepts without jargon</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <svg class="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span>Experiment with real-world AI tools (chatbots, image generation, data
+                                            analysis)</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <svg class="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span>Build simple projects that spark creativity and confidence</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Visual/Vision -->
+                    <div class="bg-slate-50 rounded-3xl p-8 lg:p-10 border border-slate-100 relative overflow-hidden">
+                        <!-- Decorative Blobs -->
+                        <div class="absolute -top-24 -right-24 w-64 h-64 bg-brandYellow/10 rounded-full blur-3xl"></div>
+                        <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-brandPurple/10 rounded-full blur-3xl">
+                        </div>
+
+                        <div class="relative z-10 space-y-10">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-3">🔮 Our Vision</h3>
+                                <p class="text-slate-600 leading-relaxed">
+                                    We see a future where AI literacy is as common as computer literacy, empowering
+                                    people
+                                    of all ages to engage meaningfully with technology and shape its role in society.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-4">🌍 Who We Serve</h3>
+                                <ul class="space-y-4">
+                                    <li
+                                        class="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                                        <span class="text-2xl">👩‍💼</span>
+                                        <span class="font-medium text-slate-700">Mid-career professionals seeking to
+                                            upskill</span>
+                                    </li>
+                                    <li
+                                        class="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                                        <span class="text-2xl">👵</span>
+                                        <span class="font-medium text-slate-700">Retirees and lifelong learners</span>
+                                    </li>
+                                    <li
+                                        class="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                                        <span class="text-2xl">👩‍🏫</span>
+                                        <span class="font-medium text-slate-700">Educators, community leaders, and
+                                            hobbyists</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="relative py-24 overflow-hidden">
+            <!-- Background -->
+            <div class="absolute inset-0 bg-gradient-to-br from-indigo-950 via-slate-900 to-purple-950"></div>
+            <div class="absolute inset-0 bg-hero-pattern opacity-30"></div>
+
+            <!-- Decorative blobs -->
+            <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-brandPurple/20 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-brandPink/15 rounded-full blur-3xl"></div>
+            <div class="absolute top-1/2 left-0 w-[300px] h-[300px] bg-brandOrange/10 rounded-full blur-3xl"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-12">
+                    <span
+                        class="inline-block py-1 px-3 rounded bg-white/10 text-brandPink text-sm font-bold uppercase tracking-wider mb-4">Testimonials</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">What Our Students Say</h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-brandPurple to-brandPink mx-auto mt-4 rounded-full">
+                    </div>
+                </div>
+
+                <div class="relative max-w-7xl mx-auto">
+                    <!-- Previous Button -->
+                    <button id="carousel-prev"
+                        class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-5 z-20 w-10 h-10 sm:w-12 sm:h-12 bg-white/10 backdrop-blur-md rounded-full shadow-lg border border-white/20 flex items-center justify-center text-white/60 hover:text-white hover:border-brandPink hover:bg-white/20 hover:shadow-xl transition-all duration-200"
+                        aria-label="Previous testimonial">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                            </path>
+                        </svg>
+                    </button>
+
+                    <!-- Next Button -->
+                    <button id="carousel-next"
+                        class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-5 z-20 w-10 h-10 sm:w-12 sm:h-12 bg-white/10 backdrop-blur-md rounded-full shadow-lg border border-white/20 flex items-center justify-center text-white/60 hover:text-white hover:border-brandPink hover:bg-white/20 hover:shadow-xl transition-all duration-200"
+                        aria-label="Next testimonial">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                    </button>
+
+                    <!-- Carousel Track -->
+                    <div class="carousel-container overflow-hidden rounded-xl">
+                        <div class="carousel-track flex" id="track">
+                            <div class="carousel-slide flex-shrink-0 px-3" data-index="0">
+                                <div class="testimonial-card relative">
+                                    <span
+                                        class="absolute top-4 right-4 text-5xl text-brandPurple/30 font-serif leading-none select-none">"</span>
+                                    <p class="text-slate-200 italic text-lg mb-6 relative z-10">"Clear, engaging, and
+                                        incredibly well-structured—this is the AI course I wish I took earlier."</p>
+                                    <div>
+                                        <p class="font-bold text-brandPink">Susan Esq, Berkshires OLLI</p>
+                                        <p class="text-sm text-slate-400">Aug & Jun 2025</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="carousel-slide flex-shrink-0 px-3" data-index="1">
+                                <div class="testimonial-card relative">
+                                    <span
+                                        class="absolute top-4 right-4 text-5xl text-brandPurple/30 font-serif leading-none select-none">"</span>
+                                    <p class="text-slate-200 italic text-lg mb-6 relative z-10">"Agi's presentation was
+                                        absolutely captivating! ... buzzing from all the incredible insights"</p>
+                                    <div>
+                                        <p class="font-bold text-brandPink">Dr. David, JGSLI</p>
+                                        <p class="text-sm text-slate-400">Genealogy & AI Presentation</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="carousel-slide flex-shrink-0 px-3" data-index="2">
+                                <div class="testimonial-card relative">
+                                    <span
+                                        class="absolute top-4 right-4 text-5xl text-brandPurple/30 font-serif leading-none select-none">"</span>
+                                    <p class="text-slate-200 italic text-lg mb-6 relative z-10">"The instructor breaks
+                                        down AI like no one else—finally, it all clicks."</p>
+                                    <div>
+                                        <p class="font-bold text-brandPink">Dr. Jim, JGSGB</p>
+                                        <p class="text-sm text-slate-400">Feb 2025</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="carousel-slide flex-shrink-0 px-3" data-index="3">
+                                <div class="testimonial-card relative">
+                                    <span
+                                        class="absolute top-4 right-4 text-5xl text-brandPurple/30 font-serif leading-none select-none">"</span>
+                                    <p class="text-slate-200 italic text-lg mb-6 relative z-10">"A powerful wake-up call
+                                        for every entrepreneur—AI isn't optional anymore."</p>
+                                    <div>
+                                        <p class="font-bold text-brandPink">Howie, Boston Entrepreneur's Network</p>
+                                        <p class="text-sm text-slate-400">Jan 2025</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="carousel-slide flex-shrink-0 px-3" data-index="4">
+                                <div class="testimonial-card relative">
+                                    <span
+                                        class="absolute top-4 right-4 text-5xl text-brandPurple/30 font-serif leading-none select-none">"</span>
+                                    <p class="text-slate-200 italic text-lg mb-6 relative z-10">"This course gave me
+                                        real-world AI skills I could apply immediately."</p>
+                                    <div>
+                                        <p class="font-bold text-brandPink">Professor Laurie, NE Life-Long Learning</p>
+                                        <p class="text-sm text-slate-400">Jun 2024</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-slide flex-shrink-0 px-3" data-index="5">
+                                <div class="testimonial-card relative">
+                                    <span
+                                        class="absolute top-4 right-4 text-5xl text-brandPurple/30 font-serif leading-none select-none">"</span>
+                                    <p class="text-slate-200 italic text-lg mb-6 relative z-10">"..take the leap. This
+                                        course is
+                                        worth every second."</p>
+                                    <div>
+                                        <p class="font-bold text-brandPink">Alison Esq., Brandeis OLLI</p>
+                                        <p class="text-sm text-slate-400">Sep 2024</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-slide flex-shrink-0 px-3" data-index="6">
+                                    <div class="testimonial-card relative">
+                                        <span
+                                            class="absolute top-4 right-4 text-5xl text-brandPurple/30 font-serif leading-none select-none">"</span>
+                                        <p class="text-slate-200 italic text-lg mb-6 relative z-10">"Agi's insight on
+                                            Agentic
+                                            AI is game-changing. She cuts through the hype and shows exactly where the
+                                            future is heading."</p>
+                                        <div>
+                                            <p class="font-bold text-brandPink">Jason, VC for ENET</p>
+                                            <p class="text-sm text-slate-400">Jan 2026</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Dot Indicators + Pause/Play -->
+                    <div class="flex justify-center items-center gap-3 mt-8">
+                        <div id="carousel-dots" class="flex items-center gap-2"></div>
+                        <button id="carousel-pause"
+                            class="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white/50 hover:text-white hover:border-white/40 transition-all duration-200"
+                            aria-label="Pause auto-scroll">
+                            <svg id="pause-icon" class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"></path>
+                            </svg>
+                            <svg id="play-icon" class="w-3.5 h-3.5 hidden" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex items-center justify-center gap-2 mb-4">
+                <div
+                    class="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+                    A</div>
+                <span class="font-bold text-xl text-slate-900">Agi’s AI Academy</span>
+            </div>
+            <p class="text-slate-500 text-sm">&copy; 2026 Agi’s AI Classes. All rights reserved.</p>
+            <p class="text-slate-500 text-sm mt-2 font-medium"><a href="tel:6174023129"
+                    class="hover:text-primary transition-colors">(617) 402-3129</a></p>
+            <p class="text-slate-400 text-xs mt-2">Newton, Massachusetts, United States</p>
+        </div>
+    </footer>
+
+    <style>
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            height: 100%;
+            width: 100%;
+            max-width: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 240px;
+            transition: background 0.3s ease, border-color 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .carousel-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 9999px;
+            background-color: rgba(255, 255, 255, 0.25);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 0;
+        }
+
+        .carousel-dot:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .carousel-dot.active {
+            background-color: #f277ba;
+            width: 28px;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const track = document.getElementById('track');
+            const prevBtn = document.getElementById('carousel-prev');
+            const nextBtn = document.getElementById('carousel-next');
+            const dotsContainer = document.getElementById('carousel-dots');
+            const pauseBtn = document.getElementById('carousel-pause');
+            const pauseIcon = document.getElementById('pause-icon');
+            const playIcon = document.getElementById('play-icon');
+            const totalSlides = 7;
+
+            // Clone slides for seamless infinite loop
+            const originalSlides = Array.from(track.children);
+            originalSlides.forEach(slide => {
+                const clone = slide.cloneNode(true);
+                track.appendChild(clone);
+            });
+            // Also prepend clones for backward seamless loop
+            for (let i = originalSlides.length - 1; i >= 0; i--) {
+                const clone = originalSlides[i].cloneNode(true);
+                track.insertBefore(clone, track.firstChild);
+            }
+
+            let currentIndex = totalSlides; // Start at the first "real" slide (after prepended clones)
+            let isTransitioning = false;
+            let isPaused = false;
+            const transitionDuration = 500;
+            const autoPlayDelay = 2500;
+
+            // Build dot indicators
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('button');
+                dot.classList.add('carousel-dot');
+                dot.setAttribute('aria-label', `Go to testimonial ${i + 1}`);
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsContainer.appendChild(dot);
+            }
+            const dots = dotsContainer.querySelectorAll('.carousel-dot');
+
+            function getSlideWidth() {
+                return track.children[0].getBoundingClientRect().width;
+            }
+
+            function updateTrackPosition(smooth = true) {
+                const slideWidth = getSlideWidth();
+                track.style.transition = smooth ? `transform ${transitionDuration}ms cubic-bezier(0.25, 1, 0.5, 1)` : 'none';
+                track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+            }
+
+            function updateDots() {
+                const realIndex = ((currentIndex - totalSlides) % totalSlides + totalSlides) % totalSlides;
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === realIndex);
+                });
+            }
+
+            function updatePauseButton() {
+                pauseIcon.classList.toggle('hidden', isPaused);
+                playIcon.classList.toggle('hidden', !isPaused);
+                pauseBtn.setAttribute('aria-label', isPaused ? 'Resume auto-scroll' : 'Pause auto-scroll');
+                pauseBtn.classList.toggle('text-brandPink', isPaused);
+                pauseBtn.classList.toggle('border-brandPink/50', isPaused);
+                pauseBtn.classList.toggle('bg-brandPink/10', isPaused);
+            }
+
+            function goToSlide(realIndex) {
+                if (isTransitioning) return;
+                currentIndex = totalSlides + realIndex;
+                isTransitioning = true;
+                updateTrackPosition(true);
+                updateDots();
+                if (!isPaused) resetAutoPlay();
+                setTimeout(() => { isTransitioning = false; }, transitionDuration);
+            }
+
+            function nextSlide() {
+                if (isTransitioning) return;
+                isTransitioning = true;
+                currentIndex++;
+                updateTrackPosition(true);
+                updateDots();
+
+                setTimeout(() => {
+                    if (currentIndex >= totalSlides * 2) {
+                        currentIndex = totalSlides;
+                        updateTrackPosition(false);
+                    }
+                    isTransitioning = false;
+                }, transitionDuration);
+            }
+
+            function prevSlide() {
+                if (isTransitioning) return;
+                isTransitioning = true;
+                currentIndex--;
+                updateTrackPosition(true);
+                updateDots();
+
+                setTimeout(() => {
+                    if (currentIndex < totalSlides) {
+                        currentIndex = totalSlides * 2 - 1;
+                        updateTrackPosition(false);
+                    }
+                    isTransitioning = false;
+                }, transitionDuration);
+            }
+
+            // Manual controls
+            nextBtn.addEventListener('click', () => { nextSlide(); if (!isPaused) resetAutoPlay(); });
+            prevBtn.addEventListener('click', () => { prevSlide(); if (!isPaused) resetAutoPlay(); });
+
+            // Auto-play
+            let autoPlayInterval = setInterval(nextSlide, autoPlayDelay);
+
+            function startAutoPlay() {
+                clearInterval(autoPlayInterval);
+                autoPlayInterval = setInterval(nextSlide, autoPlayDelay);
+            }
+
+            function stopAutoPlay() {
+                clearInterval(autoPlayInterval);
+            }
+
+            function resetAutoPlay() {
+                stopAutoPlay();
+                startAutoPlay();
+            }
+
+            // Pause/Play toggle
+            pauseBtn.addEventListener('click', () => {
+                isPaused = !isPaused;
+                updatePauseButton();
+                if (isPaused) {
+                    stopAutoPlay();
+                } else {
+                    startAutoPlay();
+                }
+            });
+
+            // Pause on hover (only if not manually paused)
+            const carouselArea = track.closest('.relative');
+            carouselArea.addEventListener('mouseenter', () => { if (!isPaused) stopAutoPlay(); });
+            carouselArea.addEventListener('mouseleave', () => { if (!isPaused) startAutoPlay(); });
+
+            // Touch / swipe support
+            let touchStartX = 0;
+            let touchEndX = 0;
+            track.addEventListener('touchstart', (e) => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+            track.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                const diff = touchStartX - touchEndX;
+                if (Math.abs(diff) > 50) {
+                    if (diff > 0) { nextSlide(); } else { prevSlide(); }
+                    if (!isPaused) resetAutoPlay();
+                }
+            });
+
+            // Handle resize
+            let resizeTimer;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(() => updateTrackPosition(false), 100);
+            });
+
+            // Initial position & dots
+            updateTrackPosition(false);
+            updateDots();
+        });
+    </script>
+    <!-- Audio Player -->
+    <audio id="bg-music" loop>
+        <source src="AI Classroom Symphony.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="fixed bottom-6 left-6 z-50 flex items-center gap-3">
+        <button id="music-toggle"
+            class="bg-white/90 backdrop-blur-md p-4 rounded-full shadow-xl shadow-brandPurple/40 border border-brandPurple/30 text-brandPurple hover:shadow-brandPurple/60 hover:scale-110 transition-all duration-300 group"
+            aria-label="Toggle Music">
+            <div class="relative w-6 h-6 flex items-center justify-center">
+                <!-- Play Icon -->
+                <svg id="icon-play" class="w-6 h-6 absolute transition-opacity duration-300" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12 6-12 6z"></path>
+                </svg>
+                <!-- Pause Icon -->
+                <svg id="icon-pause" class="w-6 h-6 absolute transition-opacity duration-300 opacity-0" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6"></path>
+                </svg>
+            </div>
+        </button>
+        <span
+            class="text-xs font-bold uppercase tracking-wide text-brandPurple bg-white/90 backdrop-blur px-3 py-1.5 rounded-lg shadow-md shadow-brandPurple/30 border border-brandPurple/20 animate-pulse">
+            play our song 🎵
+        </span>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const music = document.getElementById('bg-music');
+            const toggle = document.getElementById('music-toggle');
+            const iconPlay = document.getElementById('icon-play');
+            const iconPause = document.getElementById('icon-pause');
+            let isPlaying = false;
+
+            toggle.addEventListener('click', () => {
+                if (isPlaying) {
+                    music.pause();
+                    iconPlay.classList.remove('opacity-0');
+                    iconPause.classList.add('opacity-0');
+                    toggle.classList.remove('text-brandPurple', 'ring-2', 'ring-brandPurple/50');
+                } else {
+                    music.play().catch(e => console.log("Audio play failed:", e));
+                    iconPlay.classList.add('opacity-0');
+                    iconPause.classList.remove('opacity-0');
+                    toggle.classList.add('text-brandPurple', 'ring-2', 'ring-brandPurple/50');
+                }
+                isPlaying = !isPlaying;
+            });
+        });
+    </script>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+            const closeIcon = document.getElementById('close-icon');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+            menuBtn.addEventListener('click', () => {
+                const isOpen = !mobileMenu.classList.contains('hidden');
+                mobileMenu.classList.toggle('hidden');
+                hamburgerIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+                menuBtn.setAttribute('aria-expanded', !isOpen);
+            });
+
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    hamburgerIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                    menuBtn.setAttribute('aria-expanded', 'false');
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

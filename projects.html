@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Innovation Lab | Agi's AI Academy</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Explore The Innovation Lab at Agi's AI Academy, a showcase of creative, real-world AI projects built by our students.">
+    <meta name="keywords"
+        content="AI projects, student showcase, AI academy, artificial intelligence, student portfolio">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.agiaiacademy.com/projects.html">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#4f46e5',
+                        secondary: '#4338ca',
+                        accent: '#10b981',
+                        brandOrange: '#ff9914',
+                        brandOrangeDark: '#c26e00',
+                        brandPurple: '#6a70d8',
+                        brandPurpleDark: '#44487b',
+                        brandPink: '#f277ba',
+                        brandPinkDark: '#b83b82',
+                        brandYellow: '#f7ec41',
+                        brandYellowDark: '#d4c60d',
+                        slate: {
+                            850: '#1e293b',
+                        }
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%234f46e5\" fill-opacity=\"0.05\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')",
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brandPurple selection:text-white">
+    <!-- Top Announcement Banner -->
+    <div class="bg-gradient-to-r from-brandOrange to-brandPink text-white px-4 py-3 sm:px-6 lg:px-8 w-full text-center text-sm font-medium shadow-md relative z-[60]">
+        <div class="inline-flex items-center justify-center gap-3 flex-wrap">
+            <img src="images/MetroWestBubble.png" class="h-8 w-8 rounded-full shadow-sm border-2 border-white/50 object-cover" alt="MetroWest Cover">
+            <span>We're on the cover of MetroWest Living!</span>
+            <a href="MetroWestLiving_May2026Website.pdf" target="_blank" class="font-bold underline decoration-white/50 hover:decoration-white transition-colors">
+                Read the Article &rarr;
+            </a>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav
+        class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-slate-200/50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-3 group">
+                    <div
+                        class="w-10 h-10 bg-gradient-to-br from-primary to-brandPurple rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-105 transition-transform duration-300">
+                        A</div>
+                    <span class="font-bold text-2xl tracking-tight text-slate-900 font-display">Agi’s AI Academy</span>
+                </a>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html#students"
+                        class="text-slate-600 hover:text-primary font-medium transition hover:-translate-y-0.5 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all hover:after:w-full">For
+                        Students</a>
+                    <a href="index.html#organizations"
+                        class="text-slate-600 hover:text-primary font-medium transition hover:-translate-y-0.5 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all hover:after:w-full">For
+                        Organizations</a>
+                    <a href="index.html#about"
+                        class="text-slate-600 hover:text-primary font-medium transition hover:-translate-y-0.5 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all hover:after:w-full">About
+                        Us</a>
+                    <a href="index.html#testimonials"
+                        class="text-slate-600 hover:text-primary font-medium transition hover:-translate-y-0.5 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all hover:after:w-full">Testimonials</a>
+                    <a href="projects.html"
+                        class="text-primary font-bold px-4 py-2 rounded-full bg-primary/10 transition hover:-translate-y-0.5">The
+                        Innovation Lab</a>
+                    <a href="register.html"
+                        class="text-slate-600 hover:text-primary font-medium transition hover:-translate-y-0.5 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all hover:after:w-full">Register</a>
+                    <a href="mailto:info@agiaiacademy.com"
+                        class="bg-slate-900 hover:bg-primary text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all shadow-md hover:shadow-xl transform hover:-translate-y-0.5">Contact
+                        Us</a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobile-menu-btn"
+                    class="md:hidden p-2 rounded-lg text-slate-600 hover:text-primary hover:bg-slate-100 transition-colors"
+                    aria-label="Open menu" aria-expanded="false">
+                    <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden border-t border-slate-200/50">
+                <div class="py-4 space-y-1">
+                    <a href="index.html#students"
+                        class="mobile-nav-link block px-4 py-3 text-slate-600 hover:text-primary hover:bg-primary/5 rounded-lg font-medium transition-colors">For
+                        Students</a>
+                    <a href="index.html#organizations"
+                        class="mobile-nav-link block px-4 py-3 text-slate-600 hover:text-primary hover:bg-primary/5 rounded-lg font-medium transition-colors">For
+                        Organizations</a>
+                    <a href="index.html#about"
+                        class="mobile-nav-link block px-4 py-3 text-slate-600 hover:text-primary hover:bg-primary/5 rounded-lg font-medium transition-colors">About
+                        Us</a>
+                    <a href="index.html#testimonials"
+                        class="mobile-nav-link block px-4 py-3 text-slate-600 hover:text-primary hover:bg-primary/5 rounded-lg font-medium transition-colors">Testimonials</a>
+                    <a href="projects.html"
+                        class="mobile-nav-link block px-4 py-3 text-primary font-bold hover:bg-primary/5 rounded-lg transition-colors">The
+                        Innovation Lab</a>
+                    <a href="register.html"
+                        class="mobile-nav-link block px-4 py-3 text-slate-600 hover:text-primary hover:bg-primary/5 rounded-lg font-medium transition-colors">Register</a>
+                    <div class="pt-2 px-4">
+                        <a href="mailto:info@agiaiacademy.com"
+                            class="block w-full text-center bg-slate-900 hover:bg-primary text-white px-6 py-3 rounded-full text-sm font-semibold transition-all shadow-md">Contact
+                            Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-slate-900 border-b border-white/10 relative overflow-hidden">
+        <!-- Decorative background elements -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-brandPink opacity-20 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-brandOrange opacity-20 blur-3xl">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10 text-center">
+            <span
+                class="inline-block py-1 px-3 rounded bg-white/10 text-brandPink text-sm font-bold uppercase tracking-wider mb-4 border border-white/20 shadow-sm backdrop-blur-md">Student
+                Showcase</span>
+            <h1
+                class="text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-brandPink via-brandPurple to-brandOrange tracking-tight mb-6 pb-2">
+                The Innovation Lab
+            </h1>
+            <p class="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+                Discover the incredible things our students are building. From automated workflows to personalized
+                applications, see how AI is brought to life.
+            </p>
+        </div>
+    </header>
+
+    <main class="py-24 bg-slate-50 relative overflow-hidden">
+        <div class="absolute inset-0 bg-hero-pattern opacity-50 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Grid for Projects -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project 6: Dreidle Game -->
+                <div onclick="openVideoModal()"
+                    class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col h-full cursor-pointer">
+                    <div class="h-48 relative overflow-hidden flex items-center justify-center">
+                        <img src="images/vibe_coded_dreidel.png" alt="Vibe Coded Dreidel Graphic" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 pointer-events-none">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-black/30 opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <svg class="w-16 h-16 text-white opacity-90 group-hover:scale-110 group-hover:opacity-100 transition-all duration-500 relative z-10" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" fill-rule="evenodd"></path>
+                        </svg>
+                        <div class="absolute bottom-4 left-4 flex gap-2 z-10">
+                            <span class="bg-white/20 backdrop-blur-md text-white text-xs font-bold px-2 py-1 rounded shadow-sm border border-white/30">Vibe Coding</span>
+                            <span class="bg-white/20 backdrop-blur-md text-white text-xs font-bold px-2 py-1 rounded shadow-sm border border-white/30">Game</span>
+                            <span class="bg-white/20 backdrop-blur-md text-white text-xs font-bold px-2 py-1 rounded shadow-sm border border-white/30">Video</span>
+                        </div>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">
+                            Dreidle Game</h3>
+                        <p class="text-slate-600 text-sm mb-6 flex-grow">A fun, interactive, and beautifully designed digital version of the traditional Chanukah Dreidel Game. Click to watch the video demonstration!</p>
+                        <div class="flex items-center gap-3 pt-6 border-t border-slate-100 mt-auto">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-700 font-bold border-2 border-white shadow-sm">
+                                A</div>
+                            <div>
+                                <p class="text-sm font-bold text-slate-800">Agi</p>
+                                <p class="text-xs text-slate-500">Innovation Lab</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 1: Gratitude Daily -->
+                <a href="gratitude.html"
+                    class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col h-full cursor-pointer">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="images/gratitude_journal_graphic_1774821967330.png" alt="Gratitude Journal Graphic"
+                            class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 pointer-events-none">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                        <div class="absolute bottom-4 left-4 flex gap-2 z-10">
+                            <span
+                                class="bg-white/20 backdrop-blur-md text-white text-xs font-bold px-2 py-1 rounded shadow-sm border border-white/30">Vibe
+                                Coding</span>
+                            <span
+                                class="bg-white/20 backdrop-blur-md text-white text-xs font-bold px-2 py-1 rounded shadow-sm border border-white/30">Mood
+                                Detection</span>
+                        </div>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">
+                            Gratitude Daily ✨</h3>
+                        <p class="text-slate-600 text-sm mb-6 flex-grow">Your new digital safe space ✨ This AI-powered
+                            journal doesn't just hold your thoughts—it tracks your vibes, detects your mood, and serves
+                            up the exact daily inspiration you need to protect your peace. 10/10 would recommend for
+                            your daily mental glow-up!</p>
+                        <div class="flex items-center gap-3 pt-6 border-t border-slate-100 mt-auto">
+                            <div
+                                class="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center text-pink-700 font-bold border-2 border-white shadow-sm">
+                                AI</div>
+                            <div>
+                                <p class="text-sm font-bold text-slate-800">Agi's Academy</p>
+                                <p class="text-xs text-slate-500">Innovation Lab</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 2 -->
+                <div
+                    class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col h-full">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="images/budget_tracker_graphic_1774821979702.png" alt="Budget Tracker Graphic"
+                            class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 pointer-events-none">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                        <div class="absolute bottom-4 left-4 flex gap-2 z-10">
+                            <span
+                                class="bg-white/20 backdrop-blur-md text-white text-xs font-bold px-2 py-1 rounded shadow-sm border border-white/30">Vibe
+                                Coding</span>
+                            <span
+                                class="bg-white/20 backdrop-blur-md text-white text-xs font-bold px-2 py-1 rounded shadow-sm border border-white/30">Replit</span>
+                        </div>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">
+                            Automated Budget Tracker</h3>
+                        <p class="text-slate-600 text-sm mb-6 flex-grow">A personalized financial dashboard that uses AI
+                            to categorize expenses and generate weekly savings insights, completely built without prior
+                            coding knowledge.</p>
+                        <div class="flex items-center gap-3 pt-6 border-t border-slate-100 mt-auto">
+                            <div
+                                class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-700 font-bold border-2 border-white shadow-sm">
+                                MS</div>
+                            <div>
+                                <p class="text-sm font-bold text-slate-800">Maria S.</p>
+                                <p class="text-xs text-slate-500">5-Week Deep Dive Graduate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div
+                    class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col h-full">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="images/ancestry_story_graphic_1774821993347.png" alt="Ancestry Story Graphic"
+                            class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 pointer-events-none">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                        <div class="absolute bottom-4 left-4 flex gap-2 z-10">
+                            <span
+                                class="bg-white/20 backdrop-blur-md text-white text-xs font-bold px-2 py-1 rounded shadow-sm border border-white/30">Genealogy</span>
+                            <span
+                                class="bg-white/20 backdrop-blur-md text-white text-xs font-bold px-2 py-1 rounded shadow-sm border border-white/30">Claude</span>
+                        </div>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">
+                            Ancestry Story Generator</h3>
+                        <p class="text-slate-600 text-sm mb-6 flex-grow">An application that takes raw census data and
+                            immigration records, transforming them into rich, readable narratives about family history.
+                        </p>
+                        <div class="flex items-center gap-3 pt-6 border-t border-slate-100 mt-auto">
+                            <div
+                                class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold border-2 border-white shadow-sm">
+                                DR</div>
+                            <div>
+                                <p class="text-sm font-bold text-slate-800">David R.</p>
+                                <p class="text-xs text-slate-500">AI 'n Genealogy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div
+                    class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col h-full">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="images/childrens_book_graphic_1774822003867.png" alt="Children's Book Graphic"
+                            class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 pointer-events-none">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                        <div class="absolute bottom-4 left-4 flex gap-2 z-10">
+                            <span
+                                class="bg-white/20 backdrop-blur-md text-white text-xs font-bold px-2 py-1 rounded shadow-sm border border-white/30">Creative</span>
+                            <span
+                                class="bg-white/20 backdrop-blur-md text-white text-xs font-bold px-2 py-1 rounded shadow-sm border border-white/30">Midjourney</span>
+                        </div>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">
+                            Children's Book Illustrator</h3>
+                        <p class="text-slate-600 text-sm mb-6 flex-grow">A complete visual storyboard for an original
+                            children's book, illustrating consistent characters across 20 distinct scenes using advanced
+                            prompting techniques.</p>
+                        <div class="flex items-center gap-3 pt-6 border-t border-slate-100 mt-auto">
+                            <div
+                                class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-700 font-bold border-2 border-white shadow-sm">
+                                EL</div>
+                            <div>
+                                <p class="text-sm font-bold text-slate-800">Eleanor L.</p>
+                                <p class="text-xs text-slate-500">10-Session Labs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div
+                    class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col h-full">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="images/ai_book_cover.png" alt="AI Illustrated Adult Short Story Anthology"
+                            class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 pointer-events-none">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                        <div class="absolute bottom-4 left-4 flex gap-2 z-10">
+                            <span
+                                class="bg-white/20 backdrop-blur-md text-white text-xs font-bold px-2 py-1 rounded shadow-sm border border-white/30">Publishing</span>
+                            <span
+                                class="bg-white/20 backdrop-blur-md text-white text-xs font-bold px-2 py-1 rounded shadow-sm border border-white/30">Creative Writing</span>
+                        </div>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">
+                            Echoes of 33,000 Restless Nights</h3>
+                        <p class="text-slate-600 text-sm mb-6 flex-grow">Transform your adult short fiction into visually stunning published books with breathtaking AI-generated graphics that captivate readers.</p>
+                        <div class="flex items-center gap-3 pt-6 border-t border-slate-100 mt-auto">
+                            <div
+                                class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-700 font-bold border-2 border-white shadow-sm">
+                                TS</div>
+                            <div>
+                                <p class="text-sm font-bold text-slate-800">Thomas S.</p>
+                                <p class="text-xs text-slate-500">10-Session Labs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to action block -->
+                <div
+                    class="md:col-span-2 lg:col-span-3 mt-12 bg-gradient-to-r from-slate-900 to-indigo-950 rounded-3xl p-10 md:p-16 text-center shadow-xl relative overflow-hidden border border-indigo-900/50">
+                    <div
+                        class="absolute top-0 left-0 w-64 h-64 bg-brandPurple/20 rounded-full blur-3xl mix-blend-screen">
+                    </div>
+                    <div
+                        class="absolute bottom-0 right-0 w-64 h-64 bg-brandOrange/20 rounded-full blur-3xl mix-blend-screen">
+                    </div>
+
+                    <div class="relative z-10">
+                        <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Ready to Build Your Own?</h2>
+                        <p class="text-slate-300 text-lg mb-8 max-w-2xl mx-auto">Join our next cohort and turn your
+                            ideas into functional, real-world tools. No prior experience needed—just your curiosity.</p>
+                        <a href="register.html"
+                            class="inline-block bg-brandYellow hover:bg-brandYellowDark text-slate-900 font-bold px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg border border-yellow-300">
+                            Find Your Class
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex items-center justify-center gap-2 mb-4">
+                <div
+                    class="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+                    A</div>
+                <span class="font-bold text-xl text-slate-900">Agi’s AI Academy</span>
+            </div>
+            <p class="text-slate-500 text-sm">&copy; 2026 Agi’s AI Classes. All rights reserved.</p>
+            <p class="text-slate-500 text-sm mt-2 font-medium"><a href="tel:6174023129" class="hover:text-primary transition-colors">(617) 402-3129</a></p>
+            <p class="text-slate-400 text-xs mt-2">Newton, Massachusetts, United States</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+            const closeIcon = document.getElementById('close-icon');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+            menuBtn.addEventListener('click', () => {
+                const isOpen = !mobileMenu.classList.contains('hidden');
+                mobileMenu.classList.toggle('hidden');
+                hamburgerIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+                menuBtn.setAttribute('aria-expanded', !isOpen);
+            });
+
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    hamburgerIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                    menuBtn.setAttribute('aria-expanded', 'false');
+                });
+            });
+        });
+
+        // Video and Audio Modal Logic
+        function openVideoModal() {
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('dreidelVideo');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            video.play();
+        }
+
+        function closeVideoModal() {
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('dreidelVideo');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            video.pause();
+            video.currentTime = 0;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const video = document.getElementById('dreidelVideo');
+            const audio = document.getElementById('dreidelAudio');
+            if (video && audio) {
+                video.addEventListener('play', () => audio.play());
+                video.addEventListener('pause', () => audio.pause());
+                video.addEventListener('seeked', () => { audio.currentTime = video.currentTime; });
+            }
+        });
+
+        // Close on escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeVideoModal();
+            }
+        });
+    </script>
+
+    <!-- Video Modal -->
+    <div id="videoModal" onclick="closeVideoModal()" class="fixed inset-0 z-[100] hidden items-center justify-center bg-slate-900/90 backdrop-blur-sm p-4 transition-opacity cursor-pointer">
+        <div class="relative w-full max-w-4xl bg-black rounded-2xl overflow-hidden shadow-2xl cursor-default" onclick="event.stopPropagation()">
+            <button onclick="closeVideoModal()" class="absolute top-4 right-4 text-white/70 hover:text-white hover:bg-white/20 z-10 bg-black/50 p-2 rounded-full backdrop-blur-md transition-colors" aria-label="Close video">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <video id="dreidelVideo" class="w-full max-h-[85vh] object-contain rounded-2xl" controls playsinline>
+                <source src="chanukahDreidelGame.mov">
+                Your browser does not support the video tag.
+            </video>
+            <audio id="dreidelAudio" src="Spin That Dreidel Code.mp3" preload="auto"></audio>
+        </div>
+    </div>
+</body>
+
+</html>

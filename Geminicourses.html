@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agi’s AI Classes – Winter 2026</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#4f46e5', // Indigo 600
+                        secondary: '#6366f1', // Indigo 500
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg {
+            background-color: #f8fafc;
+            background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-lg">A</div>
+                    <span class="font-bold text-xl tracking-tight text-slate-900">Agi’s AI Classes</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#events" class="text-slate-600 hover:text-primary font-medium transition">Events</a>
+                    <a href="#beginner" class="text-slate-600 hover:text-primary font-medium transition">Beginner</a>
+                    <a href="#intermediate" class="text-slate-600 hover:text-primary font-medium transition">Intermediate</a>
+                    <a href="#special" class="text-slate-600 hover:text-primary font-medium transition">Special Topics</a>
+                </div>
+                <div>
+                    <a href="mailto:agi@example.com" class="bg-primary hover:bg-indigo-700 text-white px-5 py-2 rounded-full text-sm font-medium transition shadow-md">Contact Agi</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-bg border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 space-y-6">
+                    <span class="inline-block bg-indigo-100 text-primary text-sm font-semibold px-3 py-1 rounded-full">Winter 2026 Registration Open</span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight">
+                        Unlock the Power of <span class="text-primary">Artificial Intelligence</span>
+                    </h1>
+                    <p class="text-lg text-slate-600 leading-relaxed max-w-lg">
+                        From "Vibe Coding" to family memorials. Join Agi for hands-on, immersive AI exploration classes designed for every experience level.
+                    </p>
+                    <div class="flex gap-4 pt-2">
+                        <a href="#beginner" class="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition shadow-lg">View Classes</a>
+                        <a href="#events" class="bg-white text-slate-700 border border-slate-300 px-6 py-3 rounded-lg font-semibold hover:bg-slate-50 transition">Upcoming Events</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center relative">
+                    <div class="absolute -inset-4 bg-indigo-500/20 rounded-2xl blur-xl transform rotate-3"></div>
+                    <img src="https://placehold.co/600x400" alt="Agi teaching AI class" class="relative rounded-2xl shadow-2xl z-10 w-full object-cover">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-20">
+
+        <section id="events" class="scroll-mt-24">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="h-10 w-1 bg-primary rounded-full"></div>
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900">Upcoming Events</h2>
+                    <p class="text-slate-500">Don't miss these special sessions</p>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition duration-300">
+                <div class="md:flex">
+                    <div class="bg-indigo-600 md:w-32 flex flex-col items-center justify-center p-6 text-white text-center">
+                        <span class="text-sm font-medium uppercase tracking-wider opacity-80">Dec</span>
+                        <span class="text-4xl font-bold">22</span>
+                        <span class="text-sm font-medium opacity-80">2025</span>
+                    </div>
+                    <div class="p-6 md:p-8 flex-grow">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-2">Boston Entrepreneur Network Panel</h3>
+                                <p class="text-slate-600 font-medium">Presentation & Discussion</p>
+                            </div>
+                            <span class="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded uppercase">Confirmed</span>
+                        </div>
+                        <div class="mt-4 flex flex-wrap gap-6 text-sm text-slate-500">
+                            <div class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                7:00 PM - 8:30 PM
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
+                                In-person and Zoom
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="beginner" class="scroll-mt-24">
+            <div class="flex items-center justify-between mb-8">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900">Beginner Classes</h2>
+                    <p class="text-slate-500 mt-1">Start your journey here (< 20 hours experience)</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <article class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:border-indigo-300 transition group">
+                    <div class="h-2 bg-emerald-400 w-full"></div>
+                    <div class="p-6 flex-grow">
+                        <div class="mb-4">
+                            <h3 class="text-lg font-bold text-slate-900 group-hover:text-primary transition">Hands on AI Exploration with Labs</h3>
+                            <p class="text-xs font-semibold text-emerald-600 mt-1 uppercase tracking-wide">OLLI Members</p>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-600 mb-6">
+                            <li class="flex items-start gap-3">
+                                <span class="text-slate-400 mt-0.5">📅</span>
+                                <span><strong>Jan 22 - Mar 26, 2026</strong><br>10x 1.5 hr sessions</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-slate-400">⏰</span>
+                                <span>Thursdays, 3:30 - 5:00 PM</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-slate-400">📍</span>
+                                <span>Zoom (Max 20)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:border-indigo-300 transition group">
+                    <div class="h-2 bg-emerald-400 w-full"></div>
+                    <div class="p-6 flex-grow">
+                        <div class="mb-4">
+                            <h3 class="text-lg font-bold text-slate-900 group-hover:text-primary transition">Hands on AI Exploration with Labs</h3>
+                            <p class="text-xs font-semibold text-emerald-600 mt-1 uppercase tracking-wide">Newton Community Ed</p>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-600 mb-6">
+                            <li class="flex items-start gap-3">
+                                <span class="text-slate-400 mt-0.5">📅</span>
+                                <span><strong>Jan 26 - Mar 9, 2026</strong><br>6x 2 hr sessions</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-slate-400">⏰</span>
+                                <span>Mondays, 6:30 - 8:30 PM</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-slate-400">📍</span>
+                                <span>Zoom (Max 20)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:border-indigo-300 transition group">
+                    <div class="h-2 bg-emerald-400 w-full"></div>
+                    <div class="p-6 flex-grow">
+                        <div class="mb-4">
+                            <h3 class="text-lg font-bold text-slate-900 group-hover:text-primary transition">How to Use Artificial Intelligence</h3>
+                            <p class="text-xs font-semibold text-emerald-600 mt-1 uppercase tracking-wide">Lasell Community ONLY</p>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-600 mb-6">
+                            <li class="flex items-start gap-3">
+                                <span class="text-slate-400 mt-0.5">📅</span>
+                                <span><strong>Jan 27 - Mar 24, 2026</strong><br>10x 1.5 hr sessions</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-slate-400">⏰</span>
+                                <span>Tuesdays, 3:00 - 4:30 PM</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-slate-400">📍</span>
+                                <span>Max 20 Students</span>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="intermediate" class="scroll-mt-24">
+            <div class="flex items-center justify-between mb-8">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900">Intermediate & Advanced</h2>
+                    <p class="text-slate-500 mt-1">For those with 25+ hours of hands-on AI experience</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <div class="bg-gradient-to-br from-indigo-50 to-white rounded-2xl border border-indigo-100 p-8 flex flex-col md:flex-row gap-6 items-start">
+                    <div class="flex-grow">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="px-2 py-1 bg-indigo-600 text-white text-xs font-bold rounded uppercase">New</span>
+                            <h3 class="text-xl font-bold text-slate-900">Vibe Coding</h3>
+                        </div>
+                        <p class="text-slate-600 mb-4 text-sm">Ready for continued independent exploration. Use of Gemini and another AI Chatbot necessary.</p>
+                        <div class="grid grid-cols-2 gap-4 text-sm text-slate-700">
+                            <div><strong>Date:</strong> Jan 28 - Feb 11, 2026</div>
+                            <div><strong>Time:</strong> Wed, 2:00 - 3:30 PM</div>
+                            <div><strong>Price:</strong> $149</div>
+                            <div><strong>Format:</strong> Zoom (3 sessions)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-indigo-50 to-white rounded-2xl border border-indigo-100 p-8 flex flex-col md:flex-row gap-6 items-start">
+                    <div class="flex-grow">
+                        <div class="flex items-center gap-3 mb-2">
+                            <h3 class="text-xl font-bold text-slate-900">AI 'n Video</h3>
+                        </div>
+                        <p class="text-slate-600 mb-4 text-sm">Create compelling video content using the latest AI tools.</p>
+                        <div class="grid grid-cols-2 gap-4 text-sm text-slate-700">
+                            <div><strong>Date:</strong> Mar 11 - Mar 25, 2026</div>
+                            <div><strong>Time:</strong> Wed, 2:00 - 3:30 PM</div>
+                            <div><strong>Price:</strong> $149</div>
+                            <div><strong>Format:</strong> Zoom (3 sessions)</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="special" class="scroll-mt-24">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="h-10 w-1 bg-amber-400 rounded-full"></div>
+                <h2 class="text-2xl font-bold text-slate-900">Special Topics</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">AI 'n Torah Study</h3>
+                    <p class="text-sm text-slate-600 mb-4 italic">"If your Rabbi lets you!"</p>
+                    <p class="text-sm text-slate-500">Learn how to apply AI to your Torah Learning. Lead your own session or immerse yourself on Shabbat.</p>
+                    <button class="mt-4 text-indigo-600 text-sm font-semibold hover:underline">Schedule for your community &rarr;</button>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Interactive AI Memorial</h3>
+                    <p class="text-sm text-slate-500 mb-4">Learn how to memorialize loved ones for future generations using documents and videos. Perfect for Holocaust and immigration stories.</p>
+                    <button class="mt-4 text-indigo-600 text-sm font-semibold hover:underline">Schedule for your community &rarr;</button>
+                </div>
+
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 shadow-sm text-white">
+                    <h3 class="font-bold text-lg mb-2">AI Coaching</h3>
+                    <p class="text-sm text-slate-300 mb-4">Have a problem to solve? No problem! Let us help you solve it.</p>
+                    <div class="mt-6">
+                        <a href="#" class="block w-full text-center bg-white text-slate-900 py-2 rounded font-semibold text-sm hover:bg-slate-100">Book a Session</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-slate-500 text-sm">&copy; 2026 Agi’s AI Classes. All rights reserved.</p>
+            <p class="text-slate-400 text-xs mt-2">Newton, Massachusetts, United States</p>
+        </div>
+    </footer>
+
+</body>
+</html>

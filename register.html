@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register for Classes | Agi's AI Academy</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Register for AI courses at Agi's AI Academy — 1-day workshops ($65), 5-week deep dives ($249), and special topics. Summer 2026 classes now open in Newton, MA.">
+    <meta name="keywords"
+        content="AI course registration, AI workshop sign up, AI classes Newton MA, beginner AI course, hands-on AI training, summer 2026 classes">
+    <meta name="author" content="Agi and Zac Sardi">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.agiaiacademy.com/register.html">
+
+    <!-- Open Graph Tags (Facebook, LinkedIn, iMessage, Slack, Discord) -->
+    <meta property="og:title" content="Register for Classes | Agi's AI Academy">
+    <meta property="og:description"
+        content="Sign up for hands-on AI courses — 1-day workshops, 5-week deep dives, and special topics. Summer 2026 classes now open.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.agiaiacademy.com/register.html">
+    <meta property="og:image" content="https://www.agiaiacademy.com/AIBackgroundImageGen.jpeg">
+    <meta property="og:site_name" content="Agi's AI Academy">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Register for Classes | Agi's AI Academy">
+    <meta name="twitter:description"
+        content="Sign up for hands-on AI courses — 1-day workshops, 5-week deep dives, and special topics. Summer 2026 now open.">
+    <meta name="twitter:image" content="https://www.agiaiacademy.com/AIBackgroundImageGen.jpeg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#4f46e5', // Indigo 600
+                        secondary: '#4338ca', // Indigo 700
+                        accent: '#10b981', // Emerald 500
+
+                        // Vibrant Brand Palette
+                        brandOrange: '#ff9914',
+                        brandOrangeDark: '#c26e00',
+                        brandPurple: '#6a70d8',
+                        brandPurpleDark: '#44487b',
+                        brandPink: '#f277ba',
+                        brandPinkDark: '#b83b82',
+                        brandYellow: '#f7ec41',
+                        brandYellowDark: '#d4c60d',
+
+                        slate: {
+                            850: '#1e293b', // Custom dark slate
+                        }
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                        'hero-pattern': "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%234f46e5\" fill-opacity=\"0.05\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')",
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(135deg, #4f46e5, #9333ea);
+        }
+
+        /* Smooth scrolling adjustment for sticky header */
+        html {
+            scroll-padding-top: 80px;
+        }
+
+        /* Carousel Styles */
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            padding: 20px 0;
+            cursor: grab;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+            gap: 24px;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        @media (min-width: 768px) {
+            .carousel-slide {
+                min-width: 50%;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .carousel-slide {
+                min-width: 33.333%;
+            }
+        }
+
+        .testimonial-card-inner {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            height: 100%;
+            position: relative;
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonial-card-inner:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brandPurple selection:text-white">
+    <!-- Top Announcement Banner -->
+    <div class="bg-gradient-to-r from-brandOrange to-brandPink text-white px-4 py-3 sm:px-6 lg:px-8 w-full text-center text-sm font-medium shadow-md relative z-[60]">
+        <div class="inline-flex items-center justify-center gap-3 flex-wrap">
+            <img src="images/MetroWestBubble.png" class="h-8 w-8 rounded-full shadow-sm border-2 border-white/50 object-cover" alt="MetroWest Cover">
+            <span>We're on the cover of MetroWest Living!</span>
+            <a href="MetroWestLiving_May2026Website.pdf" target="_blank" class="font-bold underline decoration-white/50 hover:decoration-white transition-colors">
+                Read the Article &rarr;
+            </a>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav
+        class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-slate-200/50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-3 group">
+                    <div
+                        class="w-10 h-10 bg-gradient-to-br from-primary to-brandPurple rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-105 transition-transform duration-300">
+                        A</div>
+                    <span class="font-bold text-2xl tracking-tight text-slate-900 font-display">Agi’s AI Academy</span>
+                </a>
+                <div class="hidden md:flex space-x-8 items-center">
+
+                    <a href="index.html#students"
+                        class="text-slate-600 hover:text-primary font-medium transition hover:-translate-y-0.5 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all hover:after:w-full">For
+                        Students</a>
+                    <a href="index.html#organizations"
+                        class="text-slate-600 hover:text-primary font-medium transition hover:-translate-y-0.5 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all hover:after:w-full">For
+                        Organizations</a>
+                    <a href="index.html#about"
+                        class="text-slate-600 hover:text-primary font-medium transition hover:-translate-y-0.5 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all hover:after:w-full">About
+                        Us</a>
+                    <a href="index.html#testimonials"
+                        class="text-slate-600 hover:text-primary font-medium transition hover:-translate-y-0.5 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all hover:after:w-full">Testimonials</a>
+                    <a href="projects.html"
+                        class="text-slate-600 hover:text-primary font-medium transition hover:-translate-y-0.5 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all hover:after:w-full">The
+                        Innovation Lab</a>
+                    <a href="register.html"
+                        class="text-primary font-bold px-4 py-2 rounded-full bg-primary/10 transition hover:-translate-y-0.5">Register</a>
+                    <a href="mailto:info@agiaiacademy.com"
+                        class="bg-slate-900 hover:bg-primary text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all shadow-md hover:shadow-xl transform hover:-translate-y-0.5">Contact
+                        Us</a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobile-menu-btn"
+                    class="md:hidden p-2 rounded-lg text-slate-600 hover:text-primary hover:bg-slate-100 transition-colors"
+                    aria-label="Open menu" aria-expanded="false">
+                    <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden border-t border-slate-200/50">
+                <div class="py-4 space-y-1">
+                    <a href="index.html#students"
+                        class="mobile-nav-link block px-4 py-3 text-slate-600 hover:text-primary hover:bg-primary/5 rounded-lg font-medium transition-colors">For
+                        Students</a>
+                    <a href="index.html#organizations"
+                        class="mobile-nav-link block px-4 py-3 text-slate-600 hover:text-primary hover:bg-primary/5 rounded-lg font-medium transition-colors">For
+                        Organizations</a>
+                    <a href="index.html#about"
+                        class="mobile-nav-link block px-4 py-3 text-slate-600 hover:text-primary hover:bg-primary/5 rounded-lg font-medium transition-colors">About
+                        Us</a>
+                    <a href="index.html#testimonials"
+                        class="mobile-nav-link block px-4 py-3 text-slate-600 hover:text-primary hover:bg-primary/5 rounded-lg font-medium transition-colors">Testimonials</a>
+                    <a href="projects.html"
+                        class="mobile-nav-link block px-4 py-3 text-slate-600 hover:text-primary hover:bg-primary/5 rounded-lg font-medium transition-colors">The
+                        Innovation Lab</a>
+                    <a href="register.html"
+                        class="mobile-nav-link block px-4 py-3 text-primary font-bold hover:bg-primary/5 rounded-lg transition-colors">Register</a>
+                    <div class="pt-2 px-4">
+                        <a href="mailto:info@agiaiacademy.com"
+                            class="block w-full text-center bg-slate-900 hover:bg-primary text-white px-6 py-3 rounded-full text-sm font-semibold transition-all shadow-md">Contact
+                            Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <!-- Simple Header -->
+    <header class="bg-slate-900 border-b border-white/10 relative overflow-hidden">
+        <!-- Decorative background elements -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-primary opacity-20 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-brandPurple opacity-20 blur-3xl">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10 text-center">
+            <span
+                class="inline-block py-1 px-3 rounded bg-white/10 text-brandYellow text-sm font-bold uppercase tracking-wider mb-4 border border-white/20 shadow-sm backdrop-blur-md">Summer
+                2026 Open</span>
+            <h1
+                class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-brandYellow via-brandOrange to-brandPink tracking-tight mb-4 pb-2">
+                Register for Classes
+            </h1>
+            <p class="text-lg text-slate-300 max-w-2xl mx-auto">
+                Select your path and join our vibrant community of learners.
+            </p>
+        </div>
+    </header>
+
+    <main class="space-y-32 pb-32">
+
+        <!-- Individual Classes Section -->
+        <section id="students" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
+
+
+
+
+            <!-- Beginner Schedule (Checkout) -->
+            <div id="beginner-schedule" class="mb-12 scroll-mt-24">
+
+
+                <div class="space-y-16">
+
+                    <!-- 1. One Day Workshop -->
+                    <div id="schedule-1day"
+                        class="grid md:grid-cols-12 gap-8 items-start scroll-mt-32 p-6 md:p-8 rounded-[2rem] bg-gradient-to-br from-yellow-50 via-white to-orange-50/20 border border-yellow-100/50 shadow-sm">
+                        <div class="md:col-span-4 lg:col-span-3">
+                            <div class="sticky top-24">
+                                <span
+                                    class="bg-gradient-to-r from-brandYellow/20 to-brandOrange/20 border border-brandYellow/50 text-brandYellowDark font-bold px-4 py-2 rounded-full text-sm uppercase tracking-wider mb-3 inline-block shadow-sm">1
+                                    Day Workshop</span>
+                                <h4 class="text-2xl font-bold text-slate-800 mb-2">The "Quick Start"</h4>
+                                <p class="text-slate-600">Perfect for getting up to speed instantly without a long
+                                    commitment.</p>
+                            </div>
+                        </div>
+                        <div class="md:col-span-8 lg:col-span-9 grid md:grid-cols-2 gap-8">
+                            <!-- Course Card: Tues 6/16 -->
+                            <div id="course-beginner-jun16"
+                                class="scroll-mt-32 group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
+                                <div class="h-3 bg-brandYellow w-full group-hover:bg-brandYellowDark transition-colors">
+                                </div>
+                                <div class="p-8 flex-grow flex flex-col">
+                                    <div class="mb-4">
+                                        <span
+                                            class="inline-block px-3 py-1 bg-yellow-50 text-brandYellowDark text-xs font-bold rounded-full mb-3">$65</span>
+                                        <h4 class="text-xl font-bold text-slate-900 leading-tight">AI in Use Today</h4>
+                                        <p class="text-sm text-brandYellowDark font-medium mt-2">June 16 Only</p>
+                                        <p class="text-slate-600 text-sm mt-4 mb-4 line-clamp-3">Discover how modern AI
+                                            is becoming a vital partner in daily life—navigating a changing information
+                                            landscape with clarity and confidence.</p>
+                                    </div>
+                                    <div class="space-y-4 text-slate-600 mb-8 flex-grow text-sm">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-slate-400">
+                                                📅</div>
+                                            <div>
+                                                <p class="font-semibold text-slate-900">Single 90-minute session</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-slate-400">
+                                                ⏰</div>
+                                            <div>
+                                                <p class="font-semibold text-slate-900">Tuesday</p>
+                                                <p class="text-xs">3:00 - 4:30 PM</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="https://book.stripe.com/4gM28q8en54C61l8wKbo406" target="_blank"
+                                        class="block w-full text-center py-4 rounded-xl bg-brandYellow text-slate-900 font-bold shadow-lg hover:bg-brandYellowDark hover:shadow-xl hover:-translate-y-1 transition-all">
+                                        Enroll Now - $65
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full h-px bg-slate-200 my-16"></div>
+
+                    <!-- 2. Three Week Sprint -->
+                    <div id="schedule-3week"
+                        class="grid md:grid-cols-12 gap-8 items-start scroll-mt-32 p-6 md:p-8 rounded-[2rem] bg-gradient-to-br from-purple-50 via-white to-pink-50/20 border border-purple-100/50 shadow-sm">
+                        <div class="md:col-span-4 lg:col-span-3">
+                            <div class="sticky top-24">
+                                <span
+                                    class="bg-gradient-to-r from-brandPurple/20 to-brandPink/20 border border-brandPurple/30 text-brandPurple font-bold px-4 py-2 rounded-full text-sm uppercase tracking-wider mb-3 inline-block shadow-sm">3
+                                    Week Sprint</span>
+                                <h4 class="text-2xl font-bold text-slate-800 mb-2">The "Fast Track"</h4>
+                                <p class="text-slate-600">Designed for busy professionals and learners who need high-impact skills, fast.</p>
+                            </div>
+                        </div>
+                        <div class="md:col-span-8 lg:col-span-9 grid md:grid-cols-2 gap-8">
+                            <!-- Course Card: AI Exploration 3-week -->
+                            <div id="course-exploration-3week"
+                                class="scroll-mt-32 group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
+                                <div class="h-3 bg-brandPurple w-full group-hover:bg-brandPurpleDark transition-colors">
+                                </div>
+                                <div class="p-8 flex-grow flex flex-col">
+                                    <div class="mb-4">
+                                        <span
+                                            class="inline-block px-3 py-1 bg-purple-50 text-brandPurple text-xs font-bold rounded-full mb-3">$199</span>
+                                        <h4 class="text-xl font-bold text-slate-900 leading-tight">AI Exploration</h4>
+                                        <p class="text-sm text-brandPurple font-medium mt-2">Summer Session</p>
+                                        <p class="text-slate-600 text-sm mt-4 mb-4 line-clamp-3">Designed for busy professionals and learners who need high-impact skills, fast.</p>
+                                    </div>
+                                    <div class="space-y-4 text-slate-600 mb-8 flex-grow text-sm">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-slate-400">
+                                                📅</div>
+                                            <div>
+                                                <p class="font-semibold text-slate-900">June 23 - July 7</p>
+                                                <p class="text-xs text-brandPinkDark">120 min Sessions</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-slate-400">
+                                                ⏰</div>
+                                            <div>
+                                                <p class="font-semibold text-slate-900">Tuesdays</p>
+                                                <p class="text-xs">3:00 - 5:00 PM</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="https://buy.stripe.com/fZubJ0bqzcx4dtN8wKbo407" target="_blank"
+                                        class="block w-full text-center py-4 rounded-xl bg-brandPurple text-white font-bold shadow-lg hover:bg-brandPurpleDark hover:shadow-xl hover:-translate-y-1 transition-all">
+                                        Enroll Now - $199
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full h-px bg-slate-200 my-16"></div>
+
+                    <!-- 3. Five Week Deep Dive -->
+                    <div id="schedule-5week"
+                        class="grid md:grid-cols-12 gap-8 items-start scroll-mt-32 p-6 md:p-8 rounded-[2rem] bg-gradient-to-br from-orange-50 via-white to-yellow-50/20 border border-orange-100/50 shadow-sm">
+                        <div class="md:col-span-4 lg:col-span-3">
+                            <div class="sticky top-24">
+                                <span
+                                    class="bg-gradient-to-r from-brandOrange/20 to-brandYellow/20 border border-brandOrange/30 text-brandOrangeDark font-bold px-4 py-2 rounded-full text-sm uppercase tracking-wider mb-3 inline-block shadow-sm">5
+                                    Week Deep Dive</span>
+                                <h4 class="text-2xl font-bold text-slate-800 mb-2">The "Toolkit Builder"</h4>
+                                <p class="text-slate-600">A structured journey from theory to mastery with practical
+                                    assignments.</p>
+                            </div>
+                        </div>
+                        <div class="md:col-span-8 lg:col-span-9 grid md:grid-cols-2 gap-8">
+
+
+                            <!-- Course Card: Tues 6/23 (New) -->
+                            <div id="course-exploration-jun23"
+                                class="scroll-mt-32 group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
+                                <div class="h-3 bg-brandOrange w-full group-hover:bg-brandOrangeDark transition-colors">
+                                </div>
+                                <div class="p-8 flex-grow flex flex-col">
+                                    <div class="mb-4">
+                                        <span
+                                            class="inline-block px-3 py-1 bg-orange-50 text-brandOrangeDark text-xs font-bold rounded-full mb-3">$249</span>
+                                        <h4 class="text-xl font-bold text-slate-900 leading-tight">Hands-on AI
+                                            Exploration</h4>
+                                        <p class="text-sm text-brandOrangeDark font-medium mt-2">Summer Session</p>
+                                        <p class="text-slate-600 text-sm mt-4 mb-4 line-clamp-3">Build a powerful AI
+                                            toolkit through a structured journey combining foundational knowledge with
+                                            practical assignments in creative media and data analysis.</p>
+                                    </div>
+                                    <div class="space-y-4 text-slate-600 mb-8 flex-grow text-sm">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-slate-400">
+                                                📅</div>
+                                            <div>
+                                                <p class="font-semibold text-slate-900">June 23 - July 21</p>
+                                                <p class="text-xs text-brandPinkDark">120 min Sessions</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-slate-400">
+                                                ⏰</div>
+                                            <div>
+                                                <p class="font-semibold text-slate-900">Tuesdays</p>
+                                                <p class="text-xs">3:00 - 5:00 PM</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="https://buy.stripe.com/6oU00i0LVgNk61l8wKbo405" target="_blank"
+                                        class="block w-full text-center py-4 rounded-xl bg-brandOrange text-white font-bold shadow-lg hover:bg-brandOrangeDark hover:shadow-xl hover:-translate-y-1 transition-all">
+                                        Enroll Now - $249
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-full h-px bg-slate-200 my-16"></div>
+
+                    <!-- 4. 10 Session Labs -->
+                    <div id="schedule-10session"
+                        class="grid md:grid-cols-12 gap-8 items-start scroll-mt-32 p-6 md:p-8 rounded-[2rem] bg-gradient-to-br from-pink-50 via-white to-red-50/20 border border-pink-100/50 shadow-sm">
+                        <div class="md:col-span-4 lg:col-span-3">
+                            <div class="sticky top-24">
+                                <span
+                                    class="bg-gradient-to-r from-brandPink/20 to-red-200/20 border border-brandPink/30 text-brandPinkDark font-bold px-4 py-2 rounded-full text-sm uppercase tracking-wider mb-3 inline-block shadow-sm">10 Session Labs</span>
+                                <h4 class="text-2xl font-bold text-slate-800 mb-2">The "Community"</h4>
+                                <p class="text-slate-600">No homework. Just live "Show 'n Tell" labs and co-learning.</p>
+                            </div>
+                        </div>
+                        <div class="md:col-span-8 lg:col-span-9 grid md:grid-cols-2 gap-8">
+                            <!-- Course Card: 10 Session Labs -->
+                            <div id="course-10session"
+                                class="scroll-mt-32 group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
+                                <div class="h-3 bg-brandPink w-full group-hover:bg-brandPinkDark transition-colors">
+                                </div>
+                                <div class="p-8 flex-grow flex flex-col">
+                                    <div class="mb-4">
+                                        <span
+                                            class="inline-block px-3 py-1 bg-pink-50 text-brandPinkDark text-xs font-bold rounded-full mb-3">$390</span>
+                                        <h4 class="text-xl font-bold text-slate-900 leading-tight">10 Session Labs</h4>
+                                        <p class="text-sm text-brandPinkDark font-medium mt-2">Summer Session</p>
+                                        <p class="text-slate-600 text-sm mt-4 mb-4 line-clamp-3">Join our community for 10 sessions of live Show 'n Tell labs. Learn from others and build together.</p>
+                                    </div>
+                                    <div class="space-y-4 text-slate-600 mb-8 flex-grow text-sm">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-slate-400">
+                                                📅</div>
+                                            <div>
+                                                <p class="font-semibold text-slate-900">June 23 - July 21</p>
+                                                <p class="text-xs text-brandPinkDark">10 Sessions</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-slate-400">
+                                                ⏰</div>
+                                            <div>
+                                                <p class="font-semibold text-slate-900">Tues & Thurs</p>
+                                                <p class="text-xs">3:00 - 5:00 PM</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="mailto:info@agiaiacademy.com?subject=Registration%20for%2010%20Session%20Labs"
+                                        class="block w-full text-center py-4 rounded-xl bg-brandPink text-white font-bold shadow-lg hover:bg-brandPinkDark hover:shadow-xl hover:-translate-y-1 transition-all">
+                                        Enroll Now - $390
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- Intermediate Section -->
+            <div id="intermediate-section"
+                class="scroll-mt-24 rounded-[2rem] bg-slate-900 p-8 md:p-12 relative overflow-hidden">
+                <!-- Decorative background elements -->
+                <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-primary opacity-20 blur-3xl">
+                </div>
+                <div
+                    class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-brandPurple opacity-20 blur-3xl">
+                </div>
+
+                <div class="relative z-10 mb-12">
+                    <span
+                        class="bg-gradient-to-r from-brandPurple to-indigo-400 bg-clip-text text-transparent font-bold uppercase tracking-wider text-sm">Level
+                        Up</span>
+                    <h3 class="text-3xl md:text-4xl font-bold text-white mt-2">Intermediate & Advanced</h3>
+                    <p class="text-slate-400 mt-2">Unlock the full potential of AI with specialized, project-based
+                        curriculums.</p>
+                </div>
+
+                <!-- Prerequisite Notice -->
+                <div class="relative z-10 bg-red-500/10 border border-red-500/30 rounded-xl p-6 mb-12 backdrop-blur-sm">
+                    <div class="flex items-start gap-4">
+                        <div class="text-2xl">⚠️</div>
+                        <div>
+                            <h4 class="text-red-200 font-bold text-lg mb-1">Strict Prerequisites</h4>
+                            <p class="text-red-100/80 text-sm leading-relaxed">
+                                To ensure a high-level learning environment, participants <strong>must</strong> have
+                                taken a previous course
+                                AND have <strong>over 30 hours of experience</strong> with at least 2 AI chatbots (such
+                                as ChatGPT, Claude, or Gemini).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Intermediate Pathways (Concept) -->
+
+
+                <!-- Intermediate Schedule Header -->
+
+
+                <!-- Intermediate Schedule Cards -->
+                <div class="relative z-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+
+                    <!-- AI Literacy Schedule -->
+                    <div id="schedule-literacy"
+                        class="scroll-mt-32 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition duration-300">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h4 class="text-2xl font-bold text-white mb-2">AI in Action. Stop Chatting. Start Building.</h4>
+                                <p class="text-slate-300 text-sm">Deepen your expertise with high-level strategies and
+                                    real-world implementation.</p>
+                            </div>
+                            <span class="bg-brandOrange text-white text-xs font-bold px-3 py-1 rounded-full">$249</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 text-sm text-slate-300 mb-6">
+                            <div>
+                                <span class="block text-slate-500 text-xs uppercase mb-1">Dates</span>
+                                Sep 8 - Oct 13
+                                <span class="block text-xs text-slate-400 mt-1">No class 9/22</span>
+                            </div>
+                            <div>
+                                <span class="block text-slate-500 text-xs uppercase mb-1">Time</span>
+                                Tues, 3:00 - 5:00 PM
+                            </div>
+                        </div>
+                        <a href="https://buy.stripe.com/00w14m7ajbt089tfZcbo404" target="_blank"
+                            class="inline-flex items-center justify-center w-full py-4 rounded-xl bg-gradient-to-r from-brandOrange to-brandPink text-white font-bold shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all">
+                            Enroll Now - $249 <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Special Topics Grid -->
+            <!-- Wrapped in distinct card to match Intermediate style -->
+            <div
+                class="mt-24 rounded-[2rem] bg-gradient-to-br from-teal-50 via-cyan-50 to-sky-50 p-8 md:p-12 border border-cyan-100 shadow-xl relative overflow-hidden">
+                <!-- Decorative gradient blobg -->
+                <div
+                    class="absolute top-0 right-0 w-full h-2 bg-gradient-to-r from-brandPink via-brandPurple to-brandOrange">
+                </div>
+
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="h-10 w-1.5 bg-brandPink rounded-full"></div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-800">Special Topics</h3>
+                        <p class="text-slate-500 text-sm">Schedule at your group's convenience</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div
+                        class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition relative overflow-hidden">
+
+                        <div class="w-12 h-12 bg-pink-50 rounded-lg flex items-center justify-center text-2xl mb-4">📜
+                        </div>
+                        <h4 class="font-bold text-lg text-slate-900 mb-2">AI 'n Torah Study</h4>
+                        <p class="text-sm text-slate-600 mb-4">"If your Rabbi lets you!" Apply AI to your Torah
+                            Learning.</p>
+                        <a href="mailto:info@agiaiacademy.com?subject=Waitlist%20for%20AI%20n%20Torah%20Study"
+                            class="text-brandPink text-xs font-bold uppercase tracking-wide hover:underline">Contact
+                            to Schedule &rarr;</a>
+                    </div>
+
+                    <!-- Moved from Intermediate: Vibe Coding -->
+
+                    <div
+                        class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition relative overflow-hidden">
+                        <div class="w-12 h-12 bg-purple-50 rounded-lg flex items-center justify-center text-2xl mb-4">🎹
+                        </div>
+                        <h4 class="font-bold text-lg text-slate-900 mb-2">Vibe Coding</h4>
+                        <p class="text-sm text-slate-600 mb-4">Make anything you can imagine turn into reality using
+                            Google AI Studio, Replit, Lovable or Antigravity.</p>
+                        <a href="mailto:info@agiaiacademy.com?subject=Waitlist%20for%20Vibe%20Coding"
+                            class="text-brandPurple text-xs font-bold uppercase tracking-wide hover:underline">Contact
+                            to Schedule &rarr;</a>
+                    </div>
+
+                    <!-- Moved from Intermediate: AI 'n Video -->
+
+                    <div
+                        class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition relative overflow-hidden">
+                        <div class="w-12 h-12 bg-pink-50 rounded-lg flex items-center justify-center text-2xl mb-4">🎬
+                        </div>
+                        <h4 class="font-bold text-lg text-slate-900 mb-2">AI 'n Video</h4>
+                        <p class="text-sm text-slate-600 mb-4">Master AI-driven video creation and editing techniques to
+                            produce professional content.</p>
+                        <a href="mailto:info@agiaiacademy.com?subject=Waitlist%20for%20AI%20n%20Video"
+                            class="text-brandPink text-xs font-bold uppercase tracking-wide hover:underline">Contact
+                            to Schedule &rarr;</a>
+                    </div>
+
+
+                    <div
+                        class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition relative overflow-hidden">
+                        <div class="w-12 h-12 bg-pink-50 rounded-lg flex items-center justify-center text-2xl mb-4">🕊️
+                        </div>
+                        <h4 class="font-bold text-lg text-slate-900 mb-2">Interactive AI Memorial</h4>
+                        <p class="text-sm text-slate-600 mb-4">Memorialize loved ones using documents and videos.
+                            Perfect for preserving family history.</p>
+                        <a href="mailto:info@agiaiacademy.com?subject=Waitlist%20for%20Interactive%20AI%20Memorial"
+                            class="text-brandPink text-xs font-bold uppercase tracking-wide hover:underline">Contact
+                            to Schedule &rarr;</a>
+                    </div>
+
+
+                    <div
+                        class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition relative overflow-hidden">
+                        <div class="w-12 h-12 bg-pink-50 rounded-lg flex items-center justify-center text-2xl mb-4">🧠
+                        </div>
+                        <h4 class="font-bold text-lg text-slate-900 mb-2">AI Coaching</h4>
+                        <p class="text-sm text-slate-600 mb-4">Personalized problem solving. You have a challenge, we
+                            help you solve it with AI.</p>
+                        <a href="mailto:info@agiaiacademy.com?subject=Waitlist%20for%20AI%20Coaching"
+                            class="text-brandPink text-xs font-bold uppercase tracking-wide hover:underline">Contact
+                            to Schedule &rarr;</a>
+                    </div>
+
+
+                    <div
+                        class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition relative overflow-hidden">
+                        <div class="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center text-2xl mb-4">🌳
+                        </div>
+                        <h4 class="font-bold text-lg text-slate-900 mb-2">AI 'n Genealogy</h4>
+                        <p class="text-sm text-slate-600 mb-4">Discover your roots and bring family history to life with
+                            AI tools for research and storytelling.</p>
+                        <a href="mailto:info@agiaiacademy.com?subject=Waitlist%20for%20AI%20n%20Genealogy"
+                            class="text-brandPink text-xs font-bold uppercase tracking-wide hover:underline">Contact
+                            to Schedule &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex items-center justify-center gap-2 mb-4">
+                <div
+                    class="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+                    A</div>
+                <span class="font-bold text-xl text-slate-900">Agi’s AI Academy</span>
+            </div>
+            <p class="text-slate-500 text-sm">&copy; 2026 Agi’s AI Classes. All rights reserved.</p>
+            <p class="text-slate-500 text-sm mt-2 font-medium"><a href="tel:6174023129" class="hover:text-primary transition-colors">(617) 402-3129</a></p>
+            <p class="text-slate-400 text-xs mt-2">Newton, Massachusetts, United States</p>
+        </div>
+    </footer>
+
+
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+            const closeIcon = document.getElementById('close-icon');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+            menuBtn.addEventListener('click', () => {
+                const isOpen = !mobileMenu.classList.contains('hidden');
+                mobileMenu.classList.toggle('hidden');
+                hamburgerIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+                menuBtn.setAttribute('aria-expanded', !isOpen);
+            });
+
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    hamburgerIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                    menuBtn.setAttribute('aria-expanded', 'false');
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
