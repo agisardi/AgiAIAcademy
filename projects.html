@@ -4,17 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Innovation Lab | Agi's AI Academy</title>
+    <title>The Innovation Lab | Agi's AI Academy | Greater Boston Area</title>
 
     <!-- SEO Meta Tags -->
     <meta name="description"
-        content="Explore The Innovation Lab at Agi's AI Academy, a showcase of creative, real-world AI projects built by our students.">
+        content="See what students are building at Agi's AI Academy's Innovation Lab. Real AI projects from lifelong learners across Newton, MA and the Greater Boston Area.">
     <meta name="keywords"
         content="AI projects, student showcase, AI academy, artificial intelligence, student portfolio">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.agiaiacademy.com/projects.html">
+    <link rel="canonical" href="https://agiaiacademy.com/projects.html">
+
+    <!-- Open Graph Tags (Facebook, LinkedIn, iMessage, Slack, Discord) -->
+    <meta property="og:title" content="The Innovation Lab | Agi's AI Academy | Greater Boston Area">
+    <meta property="og:description"
+        content="Student-built AI projects from Agi's AI Academy. Serving the Greater Boston Area - from complete beginners to app builders, see what's possible.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://agiaiacademy.com/projects.html">
+    <meta property="og:image" content="https://www.agiaiacademy.com/AIBackgroundImageGen.jpeg">
+    <meta property="og:site_name" content="Agi's AI Academy">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Innovation Lab | Agi's AI Academy | Greater Boston Area">
+    <meta name="twitter:description"
+        content="Student-built AI projects from Agi's AI Academy. Serving the Greater Boston Area - from complete beginners to app builders, see what's possible.">
+    <meta name="twitter:image" content="https://www.agiaiacademy.com/AIBackgroundImageGen.jpeg">
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
@@ -70,13 +89,18 @@
             border: 1px solid rgba(255, 255, 255, 0.5);
         }
     </style>
+    <!-- Academy favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="academy-icon-20261011.png">
+    <link rel="shortcut icon" type="image/x-icon" href="academy-icon-20261011.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png?v=20261011" sizes="180x180">
+<link rel="stylesheet" href="academy-navigation.css">
 </head>
 
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-brandPurple selection:text-white">
     <!-- Top Announcement Banner -->
     <div class="bg-gradient-to-r from-brandOrange to-brandPink text-white px-4 py-3 sm:px-6 lg:px-8 w-full text-center text-sm font-medium shadow-md relative z-[60]">
         <div class="inline-flex items-center justify-center gap-3 flex-wrap">
-            <img src="images/MetroWestBubble.png" class="h-8 w-8 rounded-full shadow-sm border-2 border-white/50 object-cover" alt="MetroWest Cover">
+            <img src="images/MetroWestBubble.png" width="32" height="32" class="h-8 w-8 rounded-full shadow-sm border-2 border-white/50 object-cover" alt="MetroWest Cover">
             <span>We're on the cover of MetroWest Living!</span>
             <a href="MetroWestLiving_May2026Website.pdf" target="_blank" class="font-bold underline decoration-white/50 hover:decoration-white transition-colors">
                 Read the Article &rarr;
@@ -85,81 +109,25 @@
     </div>
 
     <!-- Navigation -->
-    <nav
-        class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-slate-200/50 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
-                <a href="index.html" class="flex-shrink-0 flex items-center gap-3 group">
-                    <div
-                        class="w-10 h-10 bg-gradient-to-br from-primary to-brandPurple rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-105 transition-transform duration-300">
-                        A</div>
-                    <span class="font-bold text-2xl tracking-tight text-slate-900 font-display">Agi’s AI Academy</span>
-                </a>
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="index.html#students"
-                        class="text-slate-600 hover:text-primary font-medium transition hover:-translate-y-0.5 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all hover:after:w-full">For
-                        Students</a>
-                    <a href="index.html#organizations"
-                        class="text-slate-600 hover:text-primary font-medium transition hover:-translate-y-0.5 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all hover:after:w-full">For
-                        Organizations</a>
-                    <a href="index.html#about"
-                        class="text-slate-600 hover:text-primary font-medium transition hover:-translate-y-0.5 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all hover:after:w-full">About
-                        Us</a>
-                    <a href="index.html#testimonials"
-                        class="text-slate-600 hover:text-primary font-medium transition hover:-translate-y-0.5 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all hover:after:w-full">Testimonials</a>
-                    <a href="projects.html"
-                        class="text-primary font-bold px-4 py-2 rounded-full bg-primary/10 transition hover:-translate-y-0.5">The
-                        Innovation Lab</a>
-                    <a href="register.html"
-                        class="text-slate-600 hover:text-primary font-medium transition hover:-translate-y-0.5 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all hover:after:w-full">Register</a>
-                    <a href="mailto:info@agiaiacademy.com"
-                        class="bg-slate-900 hover:bg-primary text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all shadow-md hover:shadow-xl transform hover:-translate-y-0.5">Contact
-                        Us</a>
-                </div>
-
-                <!-- Mobile Hamburger Button -->
-                <button id="mobile-menu-btn"
-                    class="md:hidden p-2 rounded-lg text-slate-600 hover:text-primary hover:bg-slate-100 transition-colors"
-                    aria-label="Open menu" aria-expanded="false">
-                    <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
-                        </path>
-                    </svg>
-                </button>
-            </div>
-
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="md:hidden hidden border-t border-slate-200/50">
-                <div class="py-4 space-y-1">
-                    <a href="index.html#students"
-                        class="mobile-nav-link block px-4 py-3 text-slate-600 hover:text-primary hover:bg-primary/5 rounded-lg font-medium transition-colors">For
-                        Students</a>
-                    <a href="index.html#organizations"
-                        class="mobile-nav-link block px-4 py-3 text-slate-600 hover:text-primary hover:bg-primary/5 rounded-lg font-medium transition-colors">For
-                        Organizations</a>
-                    <a href="index.html#about"
-                        class="mobile-nav-link block px-4 py-3 text-slate-600 hover:text-primary hover:bg-primary/5 rounded-lg font-medium transition-colors">About
-                        Us</a>
-                    <a href="index.html#testimonials"
-                        class="mobile-nav-link block px-4 py-3 text-slate-600 hover:text-primary hover:bg-primary/5 rounded-lg font-medium transition-colors">Testimonials</a>
-                    <a href="projects.html"
-                        class="mobile-nav-link block px-4 py-3 text-primary font-bold hover:bg-primary/5 rounded-lg transition-colors">The
-                        Innovation Lab</a>
-                    <a href="register.html"
-                        class="mobile-nav-link block px-4 py-3 text-slate-600 hover:text-primary hover:bg-primary/5 rounded-lg font-medium transition-colors">Register</a>
-                    <div class="pt-2 px-4">
-                        <a href="mailto:info@agiaiacademy.com"
-                            class="block w-full text-center bg-slate-900 hover:bg-primary text-white px-6 py-3 rounded-full text-sm font-semibold transition-all shadow-md">Contact
-                            Us</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <nav id="academy-navigation" aria-label="Main navigation">
+<div class="academy-nav-inner">
+<a class="academy-brand" href="index.html"><img src="academy-icon-20261011.png" alt="" width="40" height="40">Agi’s AI Academy</a>
+<div class="academy-desktop-links"><a href="index.html#audiences">For Students and Organizations</a>
+<a href="index.html#about">About Us</a>
+<a href="index.html#testimonials">Testimonials</a>
+<a href="projects.html" aria-current="page">The Innovation Lab</a>
+<a href="classes-events.html">Classes &amp; Workshops</a>
+<a href="register.html">Register</a>
+<a href="mailto:info@agiaiacademy.com" class="academy-contact">Contact Us</a></div>
+<details class="academy-mobile-menu"><summary aria-label="Toggle main navigation">☰ Menu</summary><div class="academy-mobile-links"><a href="index.html#audiences">For Students and Organizations</a>
+<a href="index.html#about">About Us</a>
+<a href="index.html#testimonials">Testimonials</a>
+<a href="projects.html" aria-current="page">The Innovation Lab</a>
+<a href="classes-events.html">Classes &amp; Workshops</a>
+<a href="register.html">Register</a>
+<a href="mailto:info@agiaiacademy.com" class="academy-contact">Contact Us</a></div></details>
+</div>
+</nav>
 
     <!-- Header -->
     <header class="bg-slate-900 border-b border-white/10 relative overflow-hidden">
@@ -194,7 +162,7 @@
                 <a href="https://myopus.info" target="_blank"
                     class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col h-full cursor-pointer">
                     <div class="h-48 relative overflow-hidden">
-                        <img src="images/opus_boston_cover.png" alt="Opus Boston Graphic"
+                        <img src="images/opus_boston_cover.png" width="1024" height="1024" alt="Opus Boston Graphic"
                             class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 pointer-events-none">
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300">
@@ -226,7 +194,7 @@
                 <div onclick="openVideoModal()"
                     class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col h-full cursor-pointer">
                     <div class="h-48 relative overflow-hidden flex items-center justify-center">
-                        <img src="images/vibe_coded_dreidel.png" alt="Vibe Coded Dreidel Graphic" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 pointer-events-none">
+                        <img src="images/vibe_coded_dreidel.png" width="1024" height="1024" alt="Vibe Coded Dreidel Graphic" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 pointer-events-none">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-black/30 opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
                         <svg class="w-16 h-16 text-white opacity-90 group-hover:scale-110 group-hover:opacity-100 transition-all duration-500 relative z-10" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" fill-rule="evenodd"></path>
@@ -240,7 +208,8 @@
                     <div class="p-8 flex-grow flex flex-col">
                         <h3 class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">
                             Dreidle Game</h3>
-                        <p class="text-slate-600 text-sm mb-6 flex-grow">A fun, interactive, and beautifully designed digital version of the traditional Chanukah Dreidel Game. Click to watch the video demonstration!</p>
+                        <p class="text-slate-600 text-sm mb-6 flex-grow">A fun, interactive, and beautifully designed digital version of the traditional Chanukah Dreidel Game. Click the card to watch the video demonstration.</p>
+                        <a href="dreidel.html" onclick="event.stopPropagation()" class="self-start mb-6 rounded-lg bg-blue-700 px-4 py-2 text-sm font-bold text-white hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">Play Dreidel</a>
                         <div class="flex items-center gap-3 pt-6 border-t border-slate-100 mt-auto">
                             <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-700 font-bold border-2 border-white shadow-sm">
                                 A</div>
@@ -256,7 +225,7 @@
                 <a href="gratitude.html"
                     class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col h-full cursor-pointer">
                     <div class="h-48 relative overflow-hidden">
-                        <img src="images/gratitude_journal_graphic_1774821967330.png" alt="Gratitude Journal Graphic"
+                        <img src="images/gratitude_journal_graphic_1774821967330.png" width="640" height="640" alt="Gratitude Journal Graphic"
                             class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 pointer-events-none">
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300">
@@ -293,7 +262,7 @@
                 <div
                     class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col h-full">
                     <div class="h-48 relative overflow-hidden">
-                        <img src="images/budget_tracker_graphic_1774821979702.png" alt="Budget Tracker Graphic"
+                        <img src="images/budget_tracker_graphic_1774821979702.png" width="640" height="640" alt="Budget Tracker Graphic"
                             class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 pointer-events-none">
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300">
@@ -328,7 +297,7 @@
                 <div
                     class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col h-full">
                     <div class="h-48 relative overflow-hidden">
-                        <img src="images/ancestry_story_graphic_1774821993347.png" alt="Ancestry Story Graphic"
+                        <img src="images/ancestry_story_graphic_1774821993347.png" width="640" height="640" alt="Ancestry Story Graphic"
                             class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 pointer-events-none">
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300">
@@ -362,7 +331,7 @@
                 <div
                     class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col h-full">
                     <div class="h-48 relative overflow-hidden">
-                        <img src="images/childrens_book_graphic_1774822003867.png" alt="Children's Book Graphic"
+                        <img src="images/childrens_book_graphic_1774822003867.png" width="640" height="640" alt="Children's Book Graphic"
                             class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 pointer-events-none">
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300">
@@ -396,7 +365,7 @@
                 <div
                     class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col h-full">
                     <div class="h-48 relative overflow-hidden">
-                        <img src="images/ai_book_cover.png" alt="AI Illustrated Adult Short Story Anthology"
+                        <img src="images/ai_book_cover.png" width="1024" height="1024" alt="AI Illustrated Adult Short Story Anthology"
                             class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 pointer-events-none">
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300">
@@ -423,6 +392,93 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Project: Panda Cub Admin (AI in Action) -->
+                <a href="panda-cub-admin.html" aria-label="Open the Panda Cub Admin classroom demo"
+                    class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col h-full cursor-pointer">
+                    <div class="h-48 relative overflow-hidden bg-gradient-to-br from-emerald-950 via-emerald-800 to-teal-600 flex items-center justify-center p-6">
+                        <div class="absolute -right-8 -top-10 w-40 h-40 rounded-full bg-emerald-300/20 blur-2xl"></div>
+                        <div class="absolute -left-8 -bottom-12 w-40 h-40 rounded-full bg-brandYellow/20 blur-2xl"></div>
+                        <div class="relative z-10 w-full max-w-sm rounded-xl border border-white/40 bg-white/95 p-4 shadow-2xl rotate-[-2deg] group-hover:rotate-0 transition-transform duration-500">
+                            <div class="flex items-center justify-between border-b border-slate-200 pb-2">
+                                <div class="flex items-center gap-2">
+                                    <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-emerald-100 text-emerald-800 text-sm" aria-hidden="true">🐼</span>
+                                    <span class="text-xs font-bold text-slate-800">Panda Cub Academy · Admin</span>
+                                </div>
+                                <span class="rounded-full bg-emerald-100 px-2 py-1 text-[9px] font-bold text-emerald-800">Demo</span>
+                            </div>
+                            <div class="mt-3 grid grid-cols-3 gap-2">
+                                <div class="rounded-lg bg-emerald-50 p-2"><div class="text-[9px] text-slate-500">Tuition</div><div class="mt-1 h-2 w-10 rounded bg-emerald-700/70"></div></div>
+                                <div class="rounded-lg bg-amber-50 p-2"><div class="text-[9px] text-slate-500">Renewals</div><div class="mt-1 h-2 w-8 rounded bg-amber-600/70"></div></div>
+                                <div class="rounded-lg bg-slate-50 p-2"><div class="text-[9px] text-slate-500">Payments</div><div class="mt-1 h-2 w-9 rounded bg-slate-500/60"></div></div>
+                            </div>
+                            <div class="mt-3 flex items-center justify-between rounded-lg border border-slate-100 px-3 py-2">
+                                <div><div class="text-[10px] font-semibold text-slate-800">Family notice queue</div><div class="text-[9px] text-slate-500">Review before sending</div></div>
+                                <span class="rounded-full bg-amber-100 px-2 py-1 text-[9px] font-bold text-amber-800">Review</span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 flex gap-2 z-10">
+                            <span class="bg-white/20 backdrop-blur-md text-white text-xs font-bold px-2 py-1 rounded shadow-sm border border-white/30">AI in Action</span>
+                            <span class="bg-white/20 backdrop-blur-md text-white text-xs font-bold px-2 py-1 rounded shadow-sm border border-white/30">Admin dashboard</span>
+                        </div>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">Panda Cub Admin</h3>
+                        <p class="text-slate-600 text-sm mb-6 flex-grow">A classroom admin dashboard for reviewing tuition balances and enrollment renewals, filtering notice queues, and recording payment details. The linked demo uses sample records and simulated email actions.</p>
+                        <div class="flex items-center gap-3 pt-6 border-t border-slate-100 mt-auto">
+                            <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-800 font-bold border-2 border-white shadow-sm">AI</div>
+                            <div>
+                                <p class="text-sm font-bold text-slate-800">AI in Action</p>
+                                <p class="text-xs text-slate-500">Class project</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project: Home Housing Tracker (AI in Action) -->
+                <a href="home.html" aria-label="Open the Home housing tracker demo"
+                    class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col h-full cursor-pointer">
+                    <div class="h-48 relative overflow-hidden bg-gradient-to-br from-indigo-950 via-indigo-800 to-violet-700 flex items-center justify-center p-6">
+                        <div class="absolute -right-8 -top-10 w-40 h-40 rounded-full bg-brandPink/20 blur-2xl"></div>
+                        <div class="absolute -left-8 -bottom-12 w-40 h-40 rounded-full bg-brandOrange/20 blur-2xl"></div>
+                        <div class="relative z-10 w-full max-w-sm rounded-xl border border-white/30 bg-white/95 p-4 shadow-2xl rotate-[-2deg] group-hover:rotate-0 transition-transform duration-500">
+                            <div class="flex items-center justify-between border-b border-slate-200 pb-2">
+                                <div class="flex items-center gap-2">
+                                    <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-indigo-100 text-indigo-700" aria-hidden="true">
+                                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V10Z"/></svg>
+                                    </span>
+                                    <span class="text-xs font-bold text-slate-800">Home · Listings</span>
+                                </div>
+                                <span class="rounded-full bg-emerald-100 px-2 py-1 text-[9px] font-bold text-emerald-700">3 matches</span>
+                            </div>
+                            <div class="mt-3 space-y-2">
+                                <div class="flex items-center justify-between rounded-lg bg-slate-50 px-3 py-2">
+                                    <div><div class="text-[10px] font-semibold text-slate-800">Brighton · 2 bed</div><div class="text-[9px] text-slate-500">Est. monthly cost</div></div>
+                                    <div class="text-right"><div class="text-[10px] font-bold text-slate-800">$2,480</div><div class="text-[9px] font-semibold text-rose-600">Rent +$50</div></div>
+                                </div>
+                                <div class="flex items-center justify-between rounded-lg bg-slate-50 px-3 py-2">
+                                    <div><div class="text-[10px] font-semibold text-slate-800">Newton · 1 bed</div><div class="text-[9px] text-slate-500">Est. monthly cost</div></div>
+                                    <div class="text-right"><div class="text-[10px] font-bold text-slate-800">$2,150</div><div class="text-[9px] font-semibold text-emerald-600">No change</div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 flex gap-2 z-10">
+                            <span class="bg-white/20 backdrop-blur-md text-white text-xs font-bold px-2 py-1 rounded shadow-sm border border-white/30">AI in Action</span>
+                            <span class="bg-white/20 backdrop-blur-md text-white text-xs font-bold px-2 py-1 rounded shadow-sm border border-white/30">Housing Tracker</span>
+                        </div>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">Home</h3>
+                        <p class="text-slate-600 text-sm mb-6 flex-grow">A housing search tracker that filters listings, adds up estimated monthly costs, and highlights price changes from week to week.</p>
+                        <div class="flex items-center gap-3 pt-6 border-t border-slate-100 mt-auto">
+                            <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-700 font-bold border-2 border-white shadow-sm">D</div>
+                            <div>
+                                <p class="text-sm font-bold text-slate-800">David</p>
+                                <p class="text-xs text-slate-500">AI in Action</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
 
                 <!-- Call to action block -->
                 <div
@@ -458,73 +514,10 @@
                 <span class="font-bold text-xl text-slate-900">Agi’s AI Academy</span>
             </div>
             <p class="text-slate-500 text-sm">&copy; 2026 Agi’s AI Classes. All rights reserved.</p>
-            <p class="text-slate-500 text-sm mt-2 font-medium"><a href="tel:6174023129" class="hover:text-primary transition-colors">(617) 402-3129</a></p>
+            
             <p class="text-slate-400 text-xs mt-2">Newton, Massachusetts, United States</p>
         </div>
     </footer>
-
-    <!-- Mobile Menu Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const menuBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const hamburgerIcon = document.getElementById('hamburger-icon');
-            const closeIcon = document.getElementById('close-icon');
-            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-
-            menuBtn.addEventListener('click', () => {
-                const isOpen = !mobileMenu.classList.contains('hidden');
-                mobileMenu.classList.toggle('hidden');
-                hamburgerIcon.classList.toggle('hidden');
-                closeIcon.classList.toggle('hidden');
-                menuBtn.setAttribute('aria-expanded', !isOpen);
-            });
-
-            mobileNavLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                    hamburgerIcon.classList.remove('hidden');
-                    closeIcon.classList.add('hidden');
-                    menuBtn.setAttribute('aria-expanded', 'false');
-                });
-            });
-        });
-
-        // Video and Audio Modal Logic
-        function openVideoModal() {
-            const modal = document.getElementById('videoModal');
-            const video = document.getElementById('dreidelVideo');
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            video.play();
-        }
-
-        function closeVideoModal() {
-            const modal = document.getElementById('videoModal');
-            const video = document.getElementById('dreidelVideo');
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-            video.pause();
-            video.currentTime = 0;
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const video = document.getElementById('dreidelVideo');
-            const audio = document.getElementById('dreidelAudio');
-            if (video && audio) {
-                video.addEventListener('play', () => audio.play());
-                video.addEventListener('pause', () => audio.pause());
-                video.addEventListener('seeked', () => { audio.currentTime = video.currentTime; });
-            }
-        });
-
-        // Close on escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === "Escape") {
-                closeVideoModal();
-            }
-        });
-    </script>
 
     <!-- Video Modal -->
     <div id="videoModal" onclick="closeVideoModal()" class="fixed inset-0 z-[100] hidden items-center justify-center bg-slate-900/90 backdrop-blur-sm p-4 transition-opacity cursor-pointer">

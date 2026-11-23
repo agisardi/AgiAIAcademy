@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="A pass-and-play dreidel game for the AI Chanukah party.">
+<title>Dreidel Night</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,sans-serif;background:#091528;color:#fff7df;--gold:#ffc66c;--muted:#c0ccdf;--panel:#162642;--edge:#435474}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 24% 25%,#273c69,transparent 48%),#091528;min-height:100vh}
+main{max-width:1050px;margin:auto;padding:clamp(20px,5vw,65px)}
+header{border-bottom:1px solid var(--edge);padding-bottom:24px;margin-bottom:28px}
+header p{margin:0;color:var(--gold);letter-spacing:.14em;text-transform:uppercase;font-weight:700;font-size:.875rem}
+h1,h2,.pot{font-family:Georgia,serif}h1{font-size:clamp(3.1rem,9vw,6.5rem);line-height:1;margin:10px 0 0;font-weight:normal;letter-spacing:-.065em}
+h2{font-size:1.8rem;margin:0 0 14px;font-weight:normal}p{line-height:1.5}
+.layout{display:grid;grid-template-columns:1.1fr 1fr;gap:22px;align-items:start}
+.stage,.card{border:1px solid var(--edge);border-radius:24px;background:var(--panel);padding:clamp(18px,4vw,34px)}
+.stage{text-align:center;background:radial-gradient(ellipse at 50% 34%,#345487,#172742 66%);min-height:386px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.dreidel{filter:drop-shadow(0 18px 16px #091528bb);width:clamp(125px,23vw,210px);max-height:220px;transform-origin:center 54%;margin:8px auto 12px;display:block}
+.spinning{animation:spin .72s ease-in-out}@keyframes spin{0%{transform:rotate(-14deg)}35%,70%{transform:scaleX(.14) rotate(10deg)}50%{transform:scaleX(-1) rotate(-10deg)}100%{transform:none}}
+@media(prefers-reduced-motion:reduce){.spinning{animation:none}}
+.pot{font-size:1.5rem;margin:0;color:var(--gold)}.pot strong{font-size:2.15rem}
+#status{margin:12px 0;min-height:3em;width:100%;overflow-wrap:anywhere}
+form{display:grid;gap:12px}label{font-weight:650}
+input,button{font:inherit;border-radius:10px;padding:11px 14px}
+input{width:100%;border:1px solid #7084a9;background:#0c1930;color:inherit}
+button{background:var(--gold);color:#172238;border:1px solid transparent;font-weight:750;cursor:pointer}
+button.secondary{background:transparent;color:inherit;border-color:#7084a9}button:disabled{opacity:.58;cursor:default}
+button:focus-visible,input:focus-visible{outline:3px solid #b0dcff;outline-offset:3px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.names{display:grid;gap:8px}.hint{margin:0 0 12px;color:var(--muted)}
+.rules{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0 0}
+.rules div{border-top:1px solid var(--edge);padding:12px 0}.rules dt{font-weight:700;color:var(--gold)}.rules dd{margin:5px 0 0;color:var(--muted)}
+#scores{list-style:none;padding:0;margin:0 0 18px}#scores li{padding:10px 0;border-bottom:1px solid var(--edge);display:flex;justify-content:space-between;gap:10px}#scores li span:first-child{overflow-wrap:anywhere}#scores li span:last-child{white-space:nowrap}#scores [aria-current=true]{color:var(--gold);font-weight:700}
+[hidden]{display:none!important}
+@media(max-width:650px){.layout{grid-template-columns:1fr}.stage{min-height:270px}.rules{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<main>
+<header><p>AI Chanukah Party</p><h1>Dreidel Night</h1></header>
+<div class="layout">
+<section class="stage" aria-label="Dreidel and pot">
+<p class="pot">Pot <strong id="pot">0</strong></p>
+<svg class="dreidel" id="dreidel" viewBox="0 0 180 211" aria-hidden="true">
+<path fill="#e5a746" d="M83 9q0-5 5-5h15q6 0 5 6l-4 33H80z"/>
+<path fill="#647edf" d="M25 51 96 33l65 25-70 20z"/>
+<path fill="#29499b" d="M140 58l21 0-4 89-64 59 40-65z"/>
+<path fill="#afc6fc" d="M25 51l118 12-10 78-40 65-61-67z"/>
+<path fill="#d0dfff" d="M31 60l103 12-9 61-33 57-52-55z"/>
+<text id="face" x="82" y="133" fill="#152d6a" font-size="71" font-weight="700" font-family="Georgia, serif" text-anchor="middle">נ</text>
+</svg>
+<p id="status" role="status">Add your players to get started.</p>
+<button type="button" id="spin" hidden>Spin the dreidel</button>
+</section>
+<section class="card">
+<div id="setup"><h2>Who’s playing?</h2><p class="hint">Each player starts with 10 gelt. Take turns on this screen.</p>
+<form id="players"><div id="names" class="names"></div>
+<div class="actions"><button type="button" class="secondary" id="add">Add player</button><button>Start game</button></div></form></div>
+<div id="scoreboard" hidden><h2>Player gelt</h2><p class="hint" id="turn-count"></p><ul id="scores"></ul>
+<div class="actions"><button type="button" class="secondary" id="reset" hidden>Play again</button></div></div>
+</section>
+</div>
+<dl class="rules">
+<div><dt>נ · Nun</dt><dd>Do nothing</dd></div>
+<div><dt>ג · Gimel</dt><dd>Take the whole pot</dd></div>
+<div><dt>ה · Hey</dt><dd>Take half, rounded up</dd></div>
+<div><dt>ש · Shin</dt><dd>Put in one gelt</dd></div>
+</dl>
+<p class="hint">When the pot empties, players still in add one gelt each. Players with zero gelt sit out. The last player with gelt collects the pot. After 10 spins total, whoever has the most gelt wins.</p>
+</main>
+<script>
+const byId = id => document.getElementById(id);
+const names = byId('names');
+const spin = byId('spin');
+const dreidel = byId('dreidel');
+const status = byId('status');
+const rules = [['נ','Nun'],['ג','Gimel'],['ה','Hey'],['ש','Shin']];
+const turnLimit = 10;
+let players = [], pot = 0, turn = 0, spins = 0, finished = false;
+let audio;
+
+function playTone(time, frequency, duration, volume, type = 'sine') {
+  const oscillator = audio.createOscillator();
+  const gain = audio.createGain();
+  oscillator.type = type;
+  oscillator.frequency.value = frequency;
+  gain.gain.setValueAtTime(0.001, time);
+  gain.gain.exponentialRampToValueAtTime(volume, time + 0.008);
+  gain.gain.exponentialRampToValueAtTime(0.001, time + duration);
+  oscillator.connect(gain);
+  gain.connect(audio.destination);
+  oscillator.start(time);
+  oscillator.stop(time + duration);
+}
+
+function playSpin(duration) {
+  try {
+    const Audio = window.AudioContext || window.webkitAudioContext;
+    if (!Audio) return;
+    audio ??= new Audio();
+    void audio.resume().catch(() => {});
+    const start = audio.currentTime;
+    const offsets = duration < 0.3 ? [0, 0.04, 0.09] : [0, 0.048, 0.102, 0.162, 0.229, 0.305, 0.394, 0.497, 0.618];
+    offsets.forEach((offset, index) => {
+      playTone(start + offset, 175 - index * 7, 0.035, 0.09, 'triangle');
+    });
+  } catch {
+    // The game remains playable if audio is unavailable.
+  }
+}
+
+function playGelt() {
+  if (!audio) return;
+  try {
+    const start = audio.currentTime;
+    playTone(start, 1047, 0.10, 0.10, 'triangle');
+    playTone(start + 0.09, 1568, 0.32, 0.14, 'triangle');
+    playTone(start + 0.09, 3136, 0.15, 0.035);
+  } catch {
+    // Audio is optional.
+  }
+}
+
+function addPlayer(focus = false) {
+  const number = names.children.length + 1;
+  const label = document.createElement('label');
+  label.textContent = 'Player ' + number;
+  const input = document.createElement('input');
+  input.name = 'player';
+  input.placeholder = 'Name';
+  input.maxLength = 32;
+  label.append(input);
+  names.append(label);
+  if (focus) input.focus();
+}
+addPlayer();
+addPlayer();
+byId('add').onclick = () => addPlayer(true);
+
+function render(message) {
+  byId('pot').textContent = pot;
+  byId('turn-count').textContent = spins + ' of ' + turnLimit + ' turns played';
+  byId('scores').replaceChildren(...players.map((player, index) => {
+    const row = document.createElement('li');
+    const name = document.createElement('span');
+    const score = document.createElement('span');
+    name.textContent = player.name;
+    score.textContent = player.gelt + ' gelt';
+    if (!finished && index === turn) row.setAttribute('aria-current', 'true');
+    row.append(name, score);
+    return row;
+  }));
+  status.textContent = message;
+}
+function ante() {
+  for (const player of players) {
+    if (player.gelt > 0) {
+      player.gelt--;
+      pot++;
+    }
+  }
+}
+function finishGame(message = '') {
+  finished = true;
+  const highest = Math.max(...players.map(player => player.gelt));
+  const leaders = players.filter(player => player.gelt === highest).map(player => player.name);
+  const result = leaders.length === 1
+    ? leaders[0] + ' wins with ' + highest + ' gelt!'
+    : leaders.join(', ') + ' tie with ' + highest + ' gelt each!';
+  spin.hidden = true;
+  byId('reset').hidden = false;
+  render(message + result);
+  byId('reset').focus();
+}
+
+byId('players').onsubmit = event => {
+  event.preventDefault();
+  players = [...names.querySelectorAll('input')].map((input, index) => ({
+    name: input.value.trim() || 'Player ' + (index + 1), gelt: 10
+  }));
+  pot = 0;
+  turn = 0;
+  spins = 0;
+  finished = false;
+  ante();
+  byId('setup').hidden = true;
+  byId('scoreboard').hidden = false;
+  byId('reset').hidden = true;
+  spin.hidden = false;
+  render('Everyone antes one gelt. ' + players[turn].name + ' spins first.');
+  spin.focus();
+};
+
+spin.onclick = () => {
+  spin.disabled = true;
+  dreidel.classList.add('spinning');
+  const duration = matchMedia('(prefers-reduced-motion: reduce)').matches ? 150 : 720;
+  playSpin(duration / 1000);
+  const side = crypto.getRandomValues(new Uint32Array(1))[0] % rules.length;
+  setTimeout(() => {
+    dreidel.classList.remove('spinning');
+    spin.disabled = false;
+    const [letter, name] = rules[side];
+    byId('face').textContent = letter;
+    const player = players[turn];
+    let action = 'does nothing';
+    if (side === 1 || side === 2) {
+      const won = side === 1 ? pot : Math.ceil(pot / 2);
+      player.gelt += won;
+      pot -= won;
+      if (won > 0) playGelt();
+      action = 'takes ' + won + ' gelt';
+    } else if (side === 3) {
+      player.gelt--;
+      pot++;
+      action = 'puts in one gelt';
+    }
+    spins++;
+    let message = name + '! ' + player.name + ' ' + action + '. ';
+    if (awardLastPlayer(message)) return;
+    if (spins === turnLimit) {
+      finishGame(message + 'Ten turns complete. ');
+      return;
+    }
+    if (pot === 0) {
+      ante();
+      message += 'Everyone still in antes one gelt. ';
+      if (awardLastPlayer(message)) return;
+    }
+    do {
+      turn = (turn + 1) % players.length;
+    } while (players[turn].gelt === 0);
+    render(message + 'Next up: ' + players[turn].name + '.');
+    spin.focus();
+  }, duration);
+};
+
+function awardLastPlayer(message) {
+  const remaining = players.filter(player => player.gelt > 0);
+  if (remaining.length !== 1) return false;
+  if (pot > 0) playGelt();
+  remaining[0].gelt += pot;
+  pot = 0;
+  finishGame(message);
+  return true;
+}
+byId('reset').onclick = () => {
+  byId('setup').hidden = false;
+  byId('scoreboard').hidden = true;
+  byId('pot').textContent = '0';
+  byId('face').textContent = 'נ';
+  status.textContent = 'Start a new game with the same players or edit their names.';
+  names.querySelector('input').focus();
+};
+</script>
+</body>
+</html>
